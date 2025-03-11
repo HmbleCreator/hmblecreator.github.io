@@ -5,7 +5,7 @@
   
   [![Profile Views](https://komarev.com/ghpvc/?username=hmblecreator&label=Visitors&color=6f42c1&style=flat)](https://github.com/hmblecreator)
   
-  <img src="https://raw.githubusercontent.com/hmblecreator/hmblecreator/main/assets/cosmic_explorer.svg" width="400" alt="Cosmic Explorer">
+  <img src="https://github.com/HmbleCreator/HmbleCreator/blob/main/mystical.jpg" width="200" alt="Cosmic Explorer">
 
   *"The universe is a grand mathematical equation waiting to be deciphered."*
   
@@ -69,7 +69,6 @@ My compass is guided by mathematical elegance and an insatiable curiosity about 
   
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amit-kumar-0b9a5325a/)
 [![Kaggle](https://img.shields.io/badge/Kaggle-%2320BEFF.svg?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/akkmit)
-[![HackerRank](https://img.shields.io/badge/HackerRank-%2300EA64.svg?style=for-the-badge&logo=hackerrank&logoColor=white)](https://www.hackerrank.com/profile/amikumar91101)
 [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hmblecreator)
 
 </div>
