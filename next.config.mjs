@@ -13,9 +13,12 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  output: 'export',  // Add this for static export
+  basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',  // Uses your actual repo name
   images: {
     unoptimized: true,
   },
+  trailingSlash: true,  // Add this for GitHub Pages compatibility
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
