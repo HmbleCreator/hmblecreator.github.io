@@ -48,19 +48,19 @@ export default function Home() {
           {/* Social Links */}
           <div className="flex justify-center space-x-4 pt-8">
             <Button variant="outline" size="icon" className="border-mint-green/20 bg-black/50 hover:bg-black/80 hover:border-mint-green/40" asChild>
-              <Link href="https://github.com/yourusername">
+              <Link href="https://github.com/HmbleCreator">
                 <Github className="h-5 w-5 text-white" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </Button>
             <Button variant="outline" size="icon" className="border-mint-green/20 bg-black/50 hover:bg-black/80 hover:border-mint-green/40" asChild>
-              <Link href="https://linkedin.com/in/yourusername">
+              <Link href="https://linkedin.com/in/amit-kumar-0b9a5325a">
                 <Linkedin className="h-5 w-5 text-white" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
             </Button>
             <Button variant="outline" size="icon" className="border-mint-green/20 bg-black/50 hover:bg-black/80 hover:border-mint-green/40" asChild>
-              <Link href="mailto:your.email@example.com">
+              <Link href="mailto:amikumar91101@gmail.com">
                 <Mail className="h-5 w-5 text-white" />
                 <span className="sr-only">Email</span>
               </Link>
