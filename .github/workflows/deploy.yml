@@ -30,40 +30,19 @@ jobs:
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
       
-      - name: Configure Next.js for GitHub Pages
+      - name: Create Next.js config for GitHub Pages
         run: |
-          echo "Configuring Next.js for GitHub Pages"
-          if [ -f next.config.js ]; then
-            echo "Adding basePath and assetPrefix to next.config.js"
-            # Create a temporary file with the updated content
-            cat next.config.js | grep -v "basePath\|assetPrefix" > next.config.js.tmp
-            
-            # Add the configuration to the temporary file
-            echo """
-const nextConfig = {
-  output: 'export',
-  basePath: '',
-  images: { unoptimized: true },
-  trailingSlash: true,
-  ...require('./next.config.js')
-};
-
-module.exports = nextConfig;
-            """ > next.config.js
-          else
-            # Create a new next.config.js file
-            echo """
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  basePath: '',
-  images: { unoptimized: true },
-  trailingSlash: true,
-};
-
-module.exports = nextConfig;
-            """ > next.config.js
-          fi
+          echo "Creating Next.js config for GitHub Pages"
+          cat > next.config.js << 'EOL'
+          /** @type {import('next').NextConfig} */
+          const nextConfig = {
+            output: 'export',
+            images: { unoptimized: true },
+            trailingSlash: true,
+          };
+          
+          module.exports = nextConfig;
+          EOL
       
       - name: Build static site
         run: npm run build
@@ -71,7 +50,6 @@ module.exports = nextConfig;
       - name: Add .nojekyll file
         run: |
           touch out/.nojekyll
-          echo "Adding CNAME file if needed"
           echo "hmblecreator.github.io" > out/CNAME
       
       - name: Upload artifact
