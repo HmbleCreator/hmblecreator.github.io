@@ -9,31 +9,22 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    # Only ACTIONS_STEP_DEBUG & ACTIONS_RUNNER_DEBUG are valid for verbose logs
     env:
-      ACTIONS_STEP_DEBUG: true
-      ACTIONS_RUNNER_DEBUG: true
-
-    # Defaults for all `run:` steps in this job
-    defaults:
-      run:
-        shell: "bash {0}"
-        working-directory: ${{ github.workspace }}
-
+      ACTIONS_STEP_DEBUG: 'true'       # enable step debug logs
+      ACTIONS_RUNNER_DEBUG: 'true'     # enable runner debug logs
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: DEBUG: List workspace after checkout
         run: |
-          echo "::debug::Workspace contents:"
+          echo "Workspace contents after checkout:"
           ls -R .
 
       - name: Setup Node.js
@@ -43,28 +34,25 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: |
-          echo "::debug::Installing dependencies"
-          npm ci --legacy-peer-deps
+        run: npm ci --legacy-peer-deps
 
       - name: Build & Export
         run: |
           set -eux
-          echo "::debug::Running build"
+          echo "Running npm run build"
           npm run build
-          echo "::debug::Running export"
+          echo "Running npm run export"
           npm run export
 
       - name: DEBUG: List out/ directory
         run: |
-          echo "::debug::Contents of out/:"
+          echo "Contents of out/:"
           ls -R out
 
       - name: Add .nojekyll file
-        run: |
-          touch out/.nojekyll
+        run: touch out/.nojekyll
 
-      - name: Upload full workspace snapshot for debugging
+      - name: Upload debug-snapshot artifact
         uses: actions/upload-artifact@v3
         with:
           name: debug-snapshot
