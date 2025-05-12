@@ -2,8 +2,8 @@ name: Deploy Portfolio to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -11,68 +11,80 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: "pages"
   cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      ACTIONS_STEP_DEBUG: 'true'
-      ACTIONS_RUNNER_DEBUG: 'true'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: DEBUG: List workspace after checkout
-        run: |
-          echo "Workspace contents after checkout:"
-          ls -R .
-
+      
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: 18
           cache: 'npm'
-
+      
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
-
-      - name: Build & Export
+      
+      - name: Configure Next.js for GitHub Pages
         run: |
-          set -eux
-          echo "Running npm run build"
-          npm run build
-          echo "Running npm run export"
-          npm run export
+          echo "Configuring Next.js for GitHub Pages"
+          if [ -f next.config.js ]; then
+            echo "Adding basePath and assetPrefix to next.config.js"
+            # Create a temporary file with the updated content
+            cat next.config.js | grep -v "basePath\|assetPrefix" > next.config.js.tmp
+            
+            # Add the configuration to the temporary file
+            echo """
+const nextConfig = {
+  output: 'export',
+  basePath: '',
+  images: { unoptimized: true },
+  trailingSlash: true,
+  ...require('./next.config.js')
+};
 
-      - name: DEBUG: List out/ directory
-        run: |
-          echo "Contents of out/:"
-          ls -R out
+module.exports = nextConfig;
+            """ > next.config.js
+          else
+            # Create a new next.config.js file
+            echo """
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  basePath: '',
+  images: { unoptimized: true },
+  trailingSlash: true,
+};
 
+module.exports = nextConfig;
+            """ > next.config.js
+          fi
+      
+      - name: Build static site
+        run: npm run build
+      
       - name: Add .nojekyll file
-        run: touch out/.nojekyll
-
-      - name: Upload debug snapshot
-        uses: actions/upload-artifact@v3
-        with:
-          name: debug-snapshot
-          path: |
-            .
-            out
-
-      - name: Upload Pages artifact
+        run: |
+          touch out/.nojekyll
+          echo "Adding CNAME file if needed"
+          echo "hmblecreator.github.io" > out/CNAME
+      
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: out
-
+  
   deploy:
-    needs: build
-    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
