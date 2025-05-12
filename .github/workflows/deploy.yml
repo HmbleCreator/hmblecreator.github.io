@@ -3,25 +3,61 @@ on:
   push:
     branches: [ main ]
 
+# --- Enable verbose runner & step logs in Settings → Variables & secrets ---
+# Create repo-level VARIABLE  ACTIONS_RUNNER_DEBUG = true
+# Create repo-level VARIABLE  ACTIONS_STEP_DEBUG  = true
+
 permissions:
   contents: read
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: DEBUG: List workspace after checkout
+        run: |
+          echo "::debug::Listing root files"
+          ls -R .
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
-      - run: npm ci --legacy-peer-deps
-      - run: npm run build
-      - run: npm run export
-      - run: touch out/.nojekyll
-      - uses: actions/upload-pages-artifact@v3
+
+      - name: Install dependencies
+        run: |
+          echo "::debug::Installing npm deps"
+          npm ci --legacy-peer-deps
+
+      - name: Build static site
+        run: |
+          echo "::debug::Running build"
+          npm run build
+          echo "::debug::Running export"
+          npm run export
+
+      - name: DEBUG: List output directory
+        run: |
+          echo "::debug::Contents of out/:"
+          ls -R out
+
+      - name: Add .nojekyll file
+        run: |
+          echo "::debug::Creating .nojekyll"
+          touch out/.nojekyll
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: out
 
@@ -35,3 +71,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        # after this, check Actions → Run logs → step “Deploy to GitHub Pages”
