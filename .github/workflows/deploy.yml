@@ -15,22 +15,25 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    # Only ACTIONS_STEP_DEBUG & ACTIONS_RUNNER_DEBUG are valid for verbose logs
     env:
-      # Turn on step and runner debug logs (must also be set in Settings → Variables)
-      ACTIONS_STEP_DEBUG: true    # See below :contentReference[oaicite:0]{index=0}
-      RUNNER_DEBUG: true
+      ACTIONS_STEP_DEBUG: true
+      ACTIONS_RUNNER_DEBUG: true
+
+    # Defaults for all `run:` steps in this job
     defaults:
       run:
-        # Fail on first error, print each command before running it
-        shell: bash {0}
+        shell: "bash {0}"
         working-directory: ${{ github.workspace }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: DEBUG: List root files
+      - name: DEBUG: List workspace after checkout
         run: |
-          echo "::debug::Workspace contents after checkout:"
+          echo "::debug::Workspace contents:"
           ls -R .
 
       - name: Setup Node.js
@@ -41,15 +44,15 @@ jobs:
 
       - name: Install dependencies
         run: |
-          echo "::debug::Running npm ci --legacy-peer-deps"
+          echo "::debug::Installing dependencies"
           npm ci --legacy-peer-deps
 
       - name: Build & Export
         run: |
           set -eux
-          echo "::debug::Starting next.js build"
+          echo "::debug::Running build"
           npm run build
-          echo "::debug::Starting next.js export"
+          echo "::debug::Running export"
           npm run export
 
       - name: DEBUG: List out/ directory
@@ -57,19 +60,17 @@ jobs:
           echo "::debug::Contents of out/:"
           ls -R out
 
-      - name: Add .nojekyll
+      - name: Add .nojekyll file
         run: |
-          echo "::debug::Creating .nojekyll file"
           touch out/.nojekyll
 
-      - name: Upload DEBUG logs & workspace snapshot
+      - name: Upload full workspace snapshot for debugging
         uses: actions/upload-artifact@v3
         with:
           name: debug-snapshot
           path: |
             ${{ github.workspace }}
             ${{ github.workspace }}/out
-          # Upload entire workspace + out/, so you can inspect everything :contentReference[oaicite:1]{index=1}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
