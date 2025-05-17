@@ -18,7 +18,7 @@ const projects = [
     description: "Real-time particle collision simulation and analysis platform inspired by CERN's Large Hadron Collider data visualization techniques.",
     tags: ["Python", "TensorFlow", "Data Visualization"],
     links: {
-      github: "#",
+      github: "https://github.com/HmbleCreator/MathematicalUniverseExplorer",
       live: "#"
     }
   },
