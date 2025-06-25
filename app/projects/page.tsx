@@ -9,7 +9,7 @@ const projects = [
     description: "Interactive visualization of quantum mechanical systems, demonstrating wave function collapse and quantum entanglement using WebGL and Three.js.",
     tags: ["WebGL", "Three.js", "TypeScript", "Physics"],
     links: {
-      github: "#",
+      github: "https://github.com/HmbleCreator/QuantumWaveFunctionSimulator",
       live: "#"
     }
   },
