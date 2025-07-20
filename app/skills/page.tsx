@@ -1,6 +1,7 @@
 "use client";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 const skillGroups = [
   {
@@ -33,8 +34,16 @@ const skillGroups = [
 
 export default function SkillsPage() {
   return (
-    <div className="min-h-screen bg-black text-white py-20 px-4 flex items-center justify-center">
-      <div className="container mx-auto max-w-3xl">
+    <div className="min-h-screen bg-black text-white py-20 px-4 flex items-center justify-center relative">
+      {/* Navigation */}
+      <nav className="fixed top-0 right-0 z-50 p-8">
+        <ul className="flex space-x-8 font-mono text-lg">
+          <li><Link href="/" className="text-white hover:text-mint-green transition-colors">Home</Link></li>
+          <li><Link href="/skills" className="text-white hover:text-mint-green transition-colors">Skills</Link></li>
+          <li><Link href="/projects" className="text-white hover:text-mint-green transition-colors">Projects</Link></li>
+        </ul>
+      </nav>
+      <div className="container mx-auto max-w-3xl pt-24">
         <h1 className="text-4xl md:text-5xl font-mono font-bold mb-12 text-center">
           <span className="text-mint-green">Skills</span> & Expertise
         </h1>

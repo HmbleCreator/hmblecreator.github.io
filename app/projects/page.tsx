@@ -32,15 +32,6 @@ interface GitHubData {
   contributions: Contribution[];
 }
 
-const GITHUB_USERNAME = "HmbleCreator";
-const GITHUB_API_URL = "https://api.github.com/graphql";
-
-async function fetchGitHubData(): Promise<GitHubData> {
-  const res = await fetch("/api/github-projects");
-  if (!res.ok) throw new Error("Failed to fetch GitHub data");
-  return res.json();
-}
-
 export default function ProjectsPage() {
   const [data, setData] = useState<GitHubData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -55,7 +46,11 @@ export default function ProjectsPage() {
   };
 
   useEffect(() => {
-    fetchGitHubData()
+    fetch("/github-data.json")
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch GitHub data");
+        return res.json();
+      })
       .then(setData)
       .catch((err) => setError(err))
       .finally(() => setLoading(false));

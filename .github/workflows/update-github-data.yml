@@ -1,0 +1,41 @@
+name: Update GitHub Data and Deploy
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * *' # every day at midnight UTC
+
+jobs:
+  update-github-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Set up environment variables
+        run: echo "GITHUB_TOKEN=${{ secrets.MY_GH_PAT }}" >> $GITHUB_ENV
+
+      - name: Run fetch-github-projects script
+        run: npx tsx scripts/fetch-github-projects.ts
+
+      - name: Commit and push if github-data.json changed
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add public/github-data.json
+          git diff --cached --quiet || (git commit -m "chore: update github-data.json [auto]" && git push)
+
+      # If using GitHub Pages, the push will trigger the deploy workflow
+      # If using Vercel/Netlify, add a redeploy step or webhook here if needed 

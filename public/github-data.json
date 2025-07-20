@@ -1,0 +1,412 @@
+{
+  "pinnedRepos": [
+    {
+      "id": "R_kgDOPIQong",
+      "name": "OmniDoc-AI",
+      "description": "AI-powered assistant for summarizing, querying, and challenge me mode, research and legal documents using multi-provider LLMs and hybrid retrieval.",
+      "url": "https://github.com/HmbleCreator/OmniDoc-AI",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python",
+        "JavaScript",
+        "HTML",
+        "TypeScript",
+        "CSS"
+      ]
+    },
+    {
+      "id": "R_kgDON524RQ",
+      "name": "rag-chatbot",
+      "description": "Flask chatbot for querying uploaded PDFs via retrieval-augmented generation. Runs any GGUF model locally with llama.cpp—no external tools like Ollama or LM Studio required. Supports multi-model responses and session history.",
+      "url": "https://github.com/HmbleCreator/rag-chatbot",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python",
+        "HTML"
+      ]
+    },
+    {
+      "id": "R_kgDOOkVhrQ",
+      "name": "MathematicalUniverseExplorer",
+      "description": "Visualize 3D mathematical functions with an interactive Tkinter GUI. Powered by Matplotlib and NumPy for real-time surface rendering and custom expressions. An extended version of Desmos",
+      "url": "https://github.com/HmbleCreator/MathematicalUniverseExplorer",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "id": "R_kgDOOZZqFw",
+      "name": "Cosmic-Observer",
+      "description": "Interactive Flask app for exploring space weather, aurora visibility, and exoplanets using real-time data from NASA and NOAA. Built with Plotly, Pandas, and Geopy.",
+      "url": "https://github.com/HmbleCreator/Cosmic-Observer",
+      "homepageUrl": "https://cosmic-observer.vercel.app",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python",
+        "HTML"
+      ]
+    },
+    {
+      "id": "R_kgDOMbUQGg",
+      "name": "Open-Source-Licence-Wizard",
+      "description": "A Streamlit app that helps you choose the best open-source license for your project based on your preferences. Provides recommendations with key features.",
+      "url": "https://github.com/HmbleCreator/Open-Source-Licence-Wizard",
+      "homepageUrl": "https://hmblecreator-open-source-licence-wizard-main-dxfybc.streamlit.app/",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python",
+        "CSS"
+      ]
+    },
+    {
+      "id": "R_kgDOPPChmg",
+      "name": "scoreFi",
+      "description": "Machine learning pipeline to score DeFi wallets (0–1000) based on Aave V2 interactions. Includes feature engineering, Sybil detection, and behavioral analysis to support trust-driven lending and wallet segmentation.",
+      "url": "https://github.com/HmbleCreator/scoreFi",
+      "homepageUrl": null,
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Jupyter Notebook"
+      ]
+    }
+  ],
+  "otherRepos": [
+    {
+      "id": "R_kgDONqMWmQ",
+      "name": "drone-control-app",
+      "description": "...Under-Development",
+      "url": "https://github.com/HmbleCreator/drone-control-app",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "TypeScript",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": "R_kgDONriDMQ",
+      "name": "pet-care-tracker",
+      "description": "...Under-Development",
+      "url": "https://github.com/HmbleCreator/pet-care-tracker",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "id": "R_kgDONUb2Sw",
+      "name": "ICA",
+      "description": "Intelligent Code Assistant (ICA)  A multi-language code summarizer built with Python and CustomTkinter. It analyzes class structures, functions, and imports across various languages, and generates clear natural language summaries through a clean, syntax-highlighted GUI.  Ideal for devs",
+      "url": "https://github.com/HmbleCreator/ICA",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "id": "R_kgDONUc6fg",
+      "name": "OS_Project",
+      "description": "Python-powered system utility with a sleek CustomTkinter interface. Monitor processes, analyze performance, optimize resources, and get detailed system info—all in one place. Ideal for OS enthusiasts and productivity tweakers.",
+      "url": "https://github.com/HmbleCreator/OS_Project",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "id": "R_kgDOPBrPGA",
+      "name": "QuantumWaveFunctionSimulator",
+      "description": "An interactive, full-stack web app for visualizing quantum systems in 1D & 2D. Solves Schrödinger equations, simulates quantum dynamics, and supports custom potentials with real-time plotting—all built with FastAPI, React, and Plotly.js..",
+      "url": "https://github.com/HmbleCreator/QuantumWaveFunctionSimulator",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Python"
+      ]
+    },
+    {
+      "id": "R_kgDOLFHKHA",
+      "name": "HmbleCreator",
+      "description": "GitHub profile Config files.",
+      "url": "https://github.com/HmbleCreator/HmbleCreator",
+      "homepageUrl": "https://github.com/HmbleCreator",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": []
+    },
+    {
+      "id": "R_kgDONvA2zw",
+      "name": "space-debris-tracker",
+      "description": "Tracks orbital debris using satellite data and ML models to analyze space object motion and collision risks. Built with Python backend and interactive frontend.",
+      "url": "https://github.com/HmbleCreator/space-debris-tracker",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python",
+        "Cython",
+        "C",
+        "C++",
+        "Meson"
+      ]
+    },
+    {
+      "id": "R_kgDOPDaHVg",
+      "name": "Lunar-Surface-Feature-Classification-",
+      "description": "This project presents a comprehensive image classification pipeline designed to  analyze and classify images from the Artificial Lunar Rocky Landscape Dataset. The  goal is to improve accuracy and generalization using state-of-the-art deep learning  architectures, data augmentation techniques, and robust evaluation strategies. ",
+      "url": "https://github.com/HmbleCreator/Lunar-Surface-Feature-Classification-",
+      "homepageUrl": null,
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Jupyter Notebook"
+      ]
+    },
+    {
+      "id": "R_kgDON6dgsw",
+      "name": "DevFlow-Reflector",
+      "description": "DevFlow Reflector is a developer productivity tool that visualizes your Git history and lets you track your coding journey through integrated journaling. It transforms raw commit logs into dynamic analytics and insights—helping you understand your work patterns and improve your workflow. Designed as a minimal MVP with future plans for Extensions.",
+      "url": "https://github.com/HumbleCreators/DevFlow-Reflector",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python",
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "Shell"
+      ]
+    },
+    {
+      "id": "R_kgDONanx5w",
+      "name": "bubbles_Arcade_Game",
+      "description": "A MakeCode project",
+      "url": "https://github.com/HmbleCreator/bubbles_Arcade_Game",
+      "homepageUrl": "https://hmblecreator.github.io/bubbles_Arcade_Game/",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Ruby",
+        "Makefile",
+        "JavaScript",
+        "TypeScript"
+      ]
+    },
+    {
+      "id": "R_kgDOM_5mww",
+      "name": "Text-Statistics-Counter",
+      "description": null,
+      "url": "https://github.com/HmbleCreator/Text-Statistics-Counter",
+      "homepageUrl": null,
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "id": "R_kgDOM70Hcw",
+      "name": "Luxury_Products_Apparel_Recommendation_Engine",
+      "description": null,
+      "url": "https://github.com/HmbleCreator/Luxury_Products_Apparel_Recommendation_Engine",
+      "homepageUrl": null,
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Jupyter Notebook"
+      ]
+    },
+    {
+      "id": "R_kgDOLnfuRQ",
+      "name": "Game",
+      "description": null,
+      "url": "https://github.com/HmbleCreator/Game",
+      "homepageUrl": null,
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python"
+      ]
+    }
+  ],
+  "contributions": [
+    {
+      "repo": {
+        "id": "R_kgDON83WoQ",
+        "nameWithOwner": "HumbleCreators/AI-Ethics-Auditor",
+        "description": "A FOSS toolkit to detect, explain, and mitigate bias in AI/ML models and datasets. Built for developers and researchers committed to ethical AI practices.",
+        "url": "https://github.com/HumbleCreators/AI-Ethics-Auditor",
+        "isPrivate": false,
+        "languages": [
+          "Python",
+          "CSS",
+          "JavaScript",
+          "HTML"
+        ]
+      },
+      "count": 8
+    },
+    {
+      "repo": {
+        "id": "R_kgDON6dgsw",
+        "nameWithOwner": "HumbleCreators/DevFlow-Reflector",
+        "description": "DevFlow Reflector is a developer productivity tool that visualizes your Git history and lets you track your coding journey through integrated journaling. It transforms raw commit logs into dynamic analytics and insights—helping you understand your work patterns and improve your workflow. Designed as a minimal MVP with future plans for Extensions.",
+        "url": "https://github.com/HumbleCreators/DevFlow-Reflector",
+        "isPrivate": false,
+        "languages": [
+          "Python",
+          "JavaScript",
+          "CSS",
+          "HTML",
+          "Shell"
+        ]
+      },
+      "count": 3
+    },
+    {
+      "repo": {
+        "id": "R_kgDONykBzQ",
+        "nameWithOwner": "Goldziher/kreuzberg",
+        "description": "Document intelligence framework for Python - Extract text, metadata, and structured data   from PDFs, images, Office documents, and more. Built on Pandoc, PDFium, and Tesseract.",
+        "url": "https://github.com/Goldziher/kreuzberg",
+        "isPrivate": false,
+        "languages": [
+          "Python",
+          "HTML",
+          "Dockerfile"
+        ]
+      },
+      "count": 2
+    },
+    {
+      "repo": {
+        "id": "R_kgDOOG2MXw",
+        "nameWithOwner": "flare-foundation/flare-ai-kit",
+        "description": "SDK for building verifiable AI Agents on Flare using Confidential Space",
+        "url": "https://github.com/flare-foundation/flare-ai-kit",
+        "isPrivate": false,
+        "languages": [
+          "Python",
+          "Shell"
+        ]
+      },
+      "count": 1
+    },
+    {
+      "repo": {
+        "id": "R_kgDONljicg",
+        "nameWithOwner": "yaroslavyaroslav/llm_runner",
+        "description": "OpenAI-sublime-text package core package implemented in rust",
+        "url": "https://github.com/yaroslavyaroslav/llm_runner",
+        "isPrivate": false,
+        "languages": [
+          "Rust",
+          "Python"
+        ]
+      },
+      "count": 1
+    },
+    {
+      "repo": {
+        "id": "R_kgDONWcBHQ",
+        "nameWithOwner": "coderamp-labs/gitingest",
+        "description": "Replace 'hub' with 'ingest' in any GitHub URL to get a prompt-friendly extract of a codebase ",
+        "url": "https://github.com/coderamp-labs/gitingest",
+        "isPrivate": false,
+        "languages": [
+          "Python",
+          "JavaScript",
+          "Dockerfile",
+          "Jinja",
+          "HTML"
+        ]
+      },
+      "count": 1
+    },
+    {
+      "repo": {
+        "id": "R_kgDOLBZvdA",
+        "nameWithOwner": "nanbingxyz/5ire",
+        "description": "5ire is a cross-platform desktop AI assistant, MCP client. It compatible with major service providers,  supports local knowledge base and  tools via model context protocol servers .",
+        "url": "https://github.com/nanbingxyz/5ire",
+        "isPrivate": false,
+        "languages": [
+          "TypeScript",
+          "JavaScript",
+          "NSIS",
+          "SCSS",
+          "EJS"
+        ]
+      },
+      "count": 1
+    },
+    {
+      "repo": {
+        "id": "MDEwOlJlcG9zaXRvcnkxNjI2OTA4ODc=",
+        "nameWithOwner": "strawberry-graphql/strawberry",
+        "description": "A GraphQL library for Python that leverages type annotations 🍓",
+        "url": "https://github.com/strawberry-graphql/strawberry",
+        "isPrivate": false,
+        "languages": [
+          "Python",
+          "HTML",
+          "Dockerfile",
+          "Shell",
+          "TypeScript"
+        ]
+      },
+      "count": 1
+    },
+    {
+      "repo": {
+        "id": "MDEwOlJlcG9zaXRvcnk0MDA0MTc3OTY=",
+        "nameWithOwner": "CycloneDX/cyclonedx-python-lib",
+        "description": "Python implementation of OWASP CycloneDX",
+        "url": "https://github.com/CycloneDX/cyclonedx-python-lib",
+        "isPrivate": false,
+        "languages": [
+          "Python",
+          "Shell"
+        ]
+      },
+      "count": 1
+    },
+    {
+      "repo": {
+        "id": "MDEwOlJlcG9zaXRvcnkzMjMwNDg3MDI=",
+        "nameWithOwner": "OpenBB-finance/OpenBB",
+        "description": "Investment Research for Everyone, Everywhere.",
+        "url": "https://github.com/OpenBB-finance/OpenBB",
+        "isPrivate": false,
+        "languages": [
+          "Python"
+        ]
+      },
+      "count": 1
+    }
+  ]
+}
