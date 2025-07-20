@@ -13,11 +13,7 @@
 
 ## 🔭 Stellar Voyager
 
-Computer Science Engineer with a passion for exploring the mysteries of mathematics, physics, and the cosmos. I use technology as a telescope to peer into the unknown, mapping digital constellations and charting new territories in the vast universe of knowledge.
-
-## 📊 Expedition Log
-
-<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs?username=hmblecreator&show_icons=true&theme=radical&layout=compact" width="340" alt="Language Stats">
+Computer Science Engineer with a passion for exploring the mysteries of mathematics, physics, and the cosmos. I use technology as a telescope to peer into the unknown, mapping digital constellations and charting new territories in the vast universe of knowledge
 
 My journey through the intellectual cosmos has equipped me with various tools and skills. Each project represents a new discovery in my ongoing mission to understand the fundamental nature of reality through computational exploration.
 
