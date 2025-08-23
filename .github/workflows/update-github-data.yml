@@ -9,11 +9,12 @@ on:
 jobs:
   update-github-data:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to push github-data.json updates
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          persist-credentials: false
           fetch-depth: 0
 
       - name: Set up Node.js
@@ -24,10 +25,9 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Set up environment variables
-        run: echo "GITHUB_TOKEN=${{ secrets.MY_GH_PAT }}" >> $GITHUB_ENV
-
       - name: Run fetch-github-projects script
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_GH_PAT }}
         run: npx tsx scripts/fetch-github-projects.ts
 
       - name: Commit and push if github-data.json changed
@@ -36,6 +36,3 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add public/github-data.json
           git diff --cached --quiet || (git commit -m "chore: update github-data.json [auto]" && git push)
-
-      # If using GitHub Pages, the push will trigger the deploy workflow
-      # If using Vercel/Netlify, add a redeploy step or webhook here if needed 
