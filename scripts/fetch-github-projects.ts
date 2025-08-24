@@ -3,12 +3,14 @@ import fs from 'fs';
 import path from 'path';
 
 const GITHUB_USERNAME = 'HmbleCreator';
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+
+// Try to use a token from env (MY_GH_PAT or GITHUB_TOKEN)
+const GITHUB_TOKEN = process.env.MY_GH_PAT || process.env.GITHUB_TOKEN;
 const GITHUB_API_URL = 'https://api.github.com/graphql';
 
 const query = `
   query {
-    user(login: \"${GITHUB_USERNAME}\") {
+    user(login: "${GITHUB_USERNAME}") {
       pinnedItems(first: 6, types: REPOSITORY) {
         nodes {
           ... on Repository {
@@ -54,8 +56,9 @@ const query = `
 
 async function fetchGitHubData() {
   if (!GITHUB_TOKEN) {
-    throw new Error('GITHUB_TOKEN not set in environment');
+    throw new Error('❌ No GitHub token found (set MY_GH_PAT or GITHUB_TOKEN in env)');
   }
+
   const res = await fetch(GITHUB_API_URL, {
     method: 'POST',
     headers: {
@@ -64,22 +67,46 @@ async function fetchGitHubData() {
     },
     body: JSON.stringify({ query }),
   });
-  if (!res.ok) throw new Error('Failed to fetch from GitHub');
-  const { data } = await res.json();
-  // Exclude forked and private repos from projects
-  const pinnedRepos = data.user.pinnedItems.nodes.filter((repo: any) => !repo.isFork && !repo.isPrivate).map((repo: any) => ({
-    ...repo,
-    languages: repo.languages.nodes.map((l: any) => l.name),
-  }));
-  const allRepos = data.user.repositories.nodes.filter((repo: any) => !repo.isFork && !repo.isPrivate).map((repo: any) => ({
-    ...repo,
-    languages: repo.languages.nodes.map((l: any) => l.name),
-  }));
+
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(`❌ GitHub API error ${res.status}: ${errorText}`);
+  }
+
+  const { data, errors } = await res.json();
+
+  if (errors) {
+    throw new Error(`❌ GraphQL errors: ${JSON.stringify(errors, null, 2)}`);
+  }
+
+  // Filter pinned repos
+  const pinnedRepos = data.user.pinnedItems.nodes
+    .filter((repo: any) => !repo.isFork && !repo.isPrivate)
+    .map((repo: any) => ({
+      ...repo,
+      languages: repo.languages.nodes.map((l: any) => l.name),
+    }));
+
+  // Filter all public repos
+  const allRepos = data.user.repositories.nodes
+    .filter((repo: any) => !repo.isFork && !repo.isPrivate)
+    .map((repo: any) => ({
+      ...repo,
+      languages: repo.languages.nodes.map((l: any) => l.name),
+    }));
+
+  // Exclude pinned repos from "other"
   const pinnedIds = new Set(pinnedRepos.map((r: any) => r.id));
   const otherRepos = allRepos.filter((r: any) => !pinnedIds.has(r.id));
-  // Only include PR contributions to other public repos (not own or private repos)
+
+  // Contributions to other public repos
   const contributions = data.user.contributionsCollection.pullRequestContributionsByRepository
-    .filter((c: any) => c.repository && !c.repository.isPrivate && c.repository.nameWithOwner.split("/")[0] !== GITHUB_USERNAME && c.contributions.totalCount > 0)
+    .filter((c: any) =>
+      c.repository &&
+      !c.repository.isPrivate &&
+      c.repository.nameWithOwner.split("/")[0] !== GITHUB_USERNAME &&
+      c.contributions.totalCount > 0
+    )
     .map((c: any) => ({
       repo: {
         ...c.repository,
@@ -87,6 +114,7 @@ async function fetchGitHubData() {
       },
       count: c.contributions.totalCount,
     }));
+
   return { pinnedRepos, otherRepos, contributions };
 }
 
@@ -95,11 +123,11 @@ async function main() {
     const data = await fetchGitHubData();
     const outPath = path.join(process.cwd(), 'public', 'github-data.json');
     fs.writeFileSync(outPath, JSON.stringify(data, null, 2));
-    console.log('GitHub data written to', outPath);
-  } catch (err) {
-    console.error('Error fetching GitHub data:', err);
+    console.log('✅ GitHub data written to', outPath);
+  } catch (err: any) {
+    console.error('Error fetching GitHub data:', err.message);
     process.exit(1);
   }
 }
 
-main(); 
+main();
