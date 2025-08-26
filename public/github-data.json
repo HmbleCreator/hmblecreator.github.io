@@ -82,6 +82,120 @@
   ],
   "otherRepos": [
     {
+      "id": "R_kgDOOFhSig",
+      "name": "hmblecreator.github.io",
+      "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
+      "url": "https://github.com/HmbleCreator/hmblecreator.github.io",
+      "homepageUrl": "https://hmblecreator.github.io/",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "CSS",
+        "TypeScript",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": "R_kgDOPTehew",
+      "name": "scoreFi-2.0",
+      "description": null,
+      "url": "https://github.com/HmbleCreator/scoreFi-2.0",
+      "homepageUrl": null,
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Jupyter Notebook",
+        "Python"
+      ]
+    },
+    {
+      "id": "R_kgDOPds5CA",
+      "name": "solar-fault-detection-simulator",
+      "description": null,
+      "url": "https://github.com/HmbleCreator/solar-fault-detection-simulator",
+      "homepageUrl": null,
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "id": "R_kgDOPbYWMw",
+      "name": "NiftyBot",
+      "description": null,
+      "url": "https://github.com/HmbleCreator/NiftyBot",
+      "homepageUrl": null,
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python",
+        "Jupyter Notebook"
+      ]
+    },
+    {
+      "id": "R_kgDOPYe2wA",
+      "name": "Sample",
+      "description": null,
+      "url": "https://github.com/HmbleCreator/Sample",
+      "homepageUrl": "https://chatgpt-clone-production-e685.up.railway.app/",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "JavaScript",
+        "TypeScript",
+        "CSS",
+        "Batchfile",
+        "Dockerfile"
+      ]
+    },
+    {
+      "id": "R_kgDOPR10Tg",
+      "name": "Shreem",
+      "description": null,
+      "url": "https://github.com/HmbleCreator/Shreem",
+      "homepageUrl": null,
+      "isFork": false,
+      "isPrivate": false,
+      "languages": []
+    },
+    {
+      "id": "R_kgDOLnfuRQ",
+      "name": "Game",
+      "description": "Fruit Frenzy was my first fun project—a quirky Tkinter-based guessing game where players chase points by randomly drawing fruits or veggies. It includes score tracking, turn-based logic, and a personalized greeting system. A lighthearted way to explore GUIs, randomness, and interactive design in Python.",
+      "url": "https://github.com/HmbleCreator/Game",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "id": "R_kgDOM70Hcw",
+      "name": "Luxury_Products_Apparel_Recommendation_Engine",
+      "description": "A content-based fashion recommender system built in Python and Jupyter Notebook. It analyzes user-preferred item features to suggest similar luxury apparel products from a curated dataset. Highlights include data preprocessing, feature extraction, and cosine similarity for personalized results.",
+      "url": "https://github.com/HmbleCreator/Luxury_Products_Apparel_Recommendation_Engine",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Jupyter Notebook"
+      ]
+    },
+    {
+      "id": "R_kgDOM_5mww",
+      "name": "Text-Statistics-Counter",
+      "description": "Text Statistics Counter is a Python app built with PyQt6 for real-time document analysis. It tracks word and character count, estimates pages based on user-defined settings, and offers text export. Lightweight and intuitive, it's perfect for writers and editors needing fast, customizable feedback.",
+      "url": "https://github.com/HmbleCreator/Text-Statistics-Counter",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
       "id": "R_kgDONqMWmQ",
       "name": "drone-control-app",
       "description": "...Under-Development",
@@ -215,42 +329,6 @@
         "JavaScript",
         "TypeScript"
       ]
-    },
-    {
-      "id": "R_kgDOM_5mww",
-      "name": "Text-Statistics-Counter",
-      "description": null,
-      "url": "https://github.com/HmbleCreator/Text-Statistics-Counter",
-      "homepageUrl": null,
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Python"
-      ]
-    },
-    {
-      "id": "R_kgDOM70Hcw",
-      "name": "Luxury_Products_Apparel_Recommendation_Engine",
-      "description": null,
-      "url": "https://github.com/HmbleCreator/Luxury_Products_Apparel_Recommendation_Engine",
-      "homepageUrl": null,
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Jupyter Notebook"
-      ]
-    },
-    {
-      "id": "R_kgDOLnfuRQ",
-      "name": "Game",
-      "description": null,
-      "url": "https://github.com/HmbleCreator/Game",
-      "homepageUrl": null,
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Python"
-      ]
     }
   ],
   "contributions": [
@@ -306,12 +384,13 @@
       "repo": {
         "id": "R_kgDOOG2MXw",
         "nameWithOwner": "flare-foundation/flare-ai-kit",
-        "description": "SDK for building verifiable AI Agents on Flare using Confidential Space",
+        "description": "🚧 SDK for building verifiable AI Agents on Flare using Confidential Space",
         "url": "https://github.com/flare-foundation/flare-ai-kit",
         "isPrivate": false,
         "languages": [
           "Python",
-          "Shell"
+          "Shell",
+          "Dockerfile"
         ]
       },
       "count": 1
@@ -399,7 +478,7 @@
       "repo": {
         "id": "MDEwOlJlcG9zaXRvcnkzMjMwNDg3MDI=",
         "nameWithOwner": "OpenBB-finance/OpenBB",
-        "description": "Investment Research for Everyone, Everywhere.",
+        "description": "Financial data platform for analysts, quants and AI agents.",
         "url": "https://github.com/OpenBB-finance/OpenBB",
         "isPrivate": false,
         "languages": [
