@@ -36,7 +36,7 @@ jobs:
           cat > next.config.js << 'EOL'
           /** @type {import('next').NextConfig} */
           const nextConfig = {
-            output: 'export',
+            output: 'export',       // Important for static export
             images: { unoptimized: true },
             trailingSlash: true,
           };
@@ -44,25 +44,27 @@ jobs:
           module.exports = nextConfig;
           EOL
       
-      - name: Build static site
-        run: npm run build
-      
-      - name: Add .nojekyll file
+      - name: Build and export static site
+        run: |
+          npm run build
+          npm run export
+
+      - name: Add .nojekyll and CNAME
         run: |
           touch out/.nojekyll
           echo "hmblecreator.github.io" > out/CNAME
       
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: out
   
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
