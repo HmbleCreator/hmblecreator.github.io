@@ -82,6 +82,21 @@
   ],
   "otherRepos": [
     {
+      "id": "R_kgDOP0cxUQ",
+      "name": "framer-magic-hero",
+      "description": null,
+      "url": "https://github.com/HmbleCreator/framer-magic-hero",
+      "homepageUrl": null,
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "TypeScript"
+      ]
+    },
+    {
       "id": "R_kgDOOFhSig",
       "name": "hmblecreator.github.io",
       "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
