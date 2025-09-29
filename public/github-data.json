@@ -82,6 +82,20 @@
   ],
   "otherRepos": [
     {
+      "id": "R_kgDOP4T7Ng",
+      "name": "SMART_TASK_MANAGER",
+      "description": null,
+      "url": "https://github.com/HmbleCreator/SMART_TASK_MANAGER",
+      "homepageUrl": "https://smart-task-manager-iota.vercel.app",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "CSS",
+        "TypeScript",
+        "JavaScript"
+      ]
+    },
+    {
       "id": "R_kgDOP0cxUQ",
       "name": "framer-magic-hero",
       "description": null,
@@ -390,7 +404,8 @@
         "languages": [
           "Python",
           "HTML",
-          "Dockerfile"
+          "Dockerfile",
+          "TeX"
         ]
       },
       "count": 2
