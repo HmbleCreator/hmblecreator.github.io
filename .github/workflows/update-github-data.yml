@@ -1,16 +1,20 @@
-name: Update GitHub Data and Deploy
+name: Update GitHub Data
 
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'scripts/fetch-github-projects.ts'
+      - '.github/workflows/update-github-data.yml'
   schedule:
     - cron: '0 0 * * *' # every day at midnight UTC
+  workflow_dispatch: # allows manual trigger
 
 jobs:
   update-github-data:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # needed to push github-data.json updates
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -35,4 +39,4 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add public/github-data.json
-          git diff --cached --quiet || (git commit -m "chore: update github-data.json [auto]" && git push)
+          git diff --cached --quiet || (git commit -m "chore: update github-data.json [skip ci]" && git push)
