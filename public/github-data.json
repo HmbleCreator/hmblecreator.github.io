@@ -110,21 +110,6 @@
       ]
     },
     {
-      "id": "R_kgDOP0cxUQ",
-      "name": "framer-magic-hero",
-      "description": null,
-      "url": "https://github.com/HmbleCreator/framer-magic-hero",
-      "homepageUrl": null,
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "TypeScript"
-      ]
-    },
-    {
       "id": "R_kgDOPTehew",
       "name": "scoreFi-2.0",
       "description": null,
