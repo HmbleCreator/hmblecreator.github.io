@@ -397,6 +397,22 @@
     },
     {
       "repo": {
+        "id": "R_kgDOP4hDEw",
+        "nameWithOwner": "manishtarjan2/framer-magic-hero-24",
+        "description": null,
+        "url": "https://github.com/manishtarjan2/framer-magic-hero-24",
+        "isPrivate": false,
+        "languages": [
+          "TypeScript",
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ]
+      },
+      "count": 1
+    },
+    {
+      "repo": {
         "id": "R_kgDOOG2MXw",
         "nameWithOwner": "flare-foundation/flare-ai-kit",
         "description": "🚧 SDK for building verifiable AI Agents on Flare using Confidential Space",
