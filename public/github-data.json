@@ -364,6 +364,22 @@
     },
     {
       "repo": {
+        "id": "R_kgDOP4hDEw",
+        "nameWithOwner": "manishtarjan2/framer-magic-hero-24",
+        "description": null,
+        "url": "https://github.com/manishtarjan2/framer-magic-hero-24",
+        "isPrivate": false,
+        "languages": [
+          "TypeScript",
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ]
+      },
+      "count": 3
+    },
+    {
+      "repo": {
         "id": "R_kgDON6dgsw",
         "nameWithOwner": "HumbleCreators/DevFlow-Reflector",
         "description": "DevFlow Reflector is a developer productivity tool that visualizes your Git history and lets you track your coding journey through integrated journaling. It transforms raw commit logs into dynamic analytics and insights—helping you understand your work patterns and improve your workflow. Designed as a minimal MVP with future plans for Extensions.",
@@ -394,22 +410,6 @@
         ]
       },
       "count": 2
-    },
-    {
-      "repo": {
-        "id": "R_kgDOP4hDEw",
-        "nameWithOwner": "manishtarjan2/framer-magic-hero-24",
-        "description": null,
-        "url": "https://github.com/manishtarjan2/framer-magic-hero-24",
-        "isPrivate": false,
-        "languages": [
-          "TypeScript",
-          "JavaScript",
-          "HTML",
-          "CSS"
-        ]
-      },
-      "count": 1
     },
     {
       "repo": {
@@ -501,19 +501,6 @@
         "languages": [
           "Python",
           "Shell"
-        ]
-      },
-      "count": 1
-    },
-    {
-      "repo": {
-        "id": "MDEwOlJlcG9zaXRvcnkzMjMwNDg3MDI=",
-        "nameWithOwner": "OpenBB-finance/OpenBB",
-        "description": "Financial data platform for analysts, quants and AI agents.",
-        "url": "https://github.com/OpenBB-finance/OpenBB",
-        "isPrivate": false,
-        "languages": [
-          "Python"
         ]
       },
       "count": 1
