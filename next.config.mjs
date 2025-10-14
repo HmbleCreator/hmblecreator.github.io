@@ -18,12 +18,13 @@ const nextConfig = {
     unoptimized: true,  // Required for static export
   },
   trailingSlash: true,  // Required for GitHub Pages compatibility
-  assetPrefix: './',  // Fix asset loading issues
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  // Remove basePath for root domain deployment
+  // basePath: '',
 }
 
 mergeConfig(nextConfig, userConfig)

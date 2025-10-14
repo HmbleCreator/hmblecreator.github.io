@@ -47,12 +47,17 @@ jobs:
         run: |
           touch out/.nojekyll
           echo "hmblecreator.github.io" > out/CNAME
-          ls -la out/  # Debug: Verify final output structure
+          echo "Contents of out directory:"
+          ls -la out/
+          echo "Contents of out directory (recursive):"
+          find out/ -type f -name "*.html" | head -10
       
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: out
+          name: github-pages
+          retention-days: 1
   
   deploy:
     needs: build
