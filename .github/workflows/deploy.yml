@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     paths-ignore:
       - 'public/github-data.json'
+      - 'README.md'
   workflow_dispatch:
 
 permissions:
@@ -32,29 +33,21 @@ jobs:
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
       
-      - name: Create Next.js config for GitHub Pages
+      - name: Verify Next.js config
         run: |
-          echo "Creating Next.js config for GitHub Pages"
-          cat > next.config.js << 'EOL'
-          /** @type {import('next').NextConfig} */
-          const nextConfig = {
-            output: 'export',
-            images: { unoptimized: true },
-            trailingSlash: true,
-          };
-          
-          module.exports = nextConfig;
-          EOL
+          echo "Verifying Next.js configuration"
+          cat next.config.mjs
       
-      - name: Build and export static site
+      - name: Build static site
         run: |
           npm run build
-          npm run export
+          ls -la out/  # Debug: Check what files were generated
 
       - name: Add .nojekyll and CNAME
         run: |
           touch out/.nojekyll
           echo "hmblecreator.github.io" > out/CNAME
+          ls -la out/  # Debug: Verify final output structure
       
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

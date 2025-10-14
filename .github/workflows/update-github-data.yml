@@ -39,4 +39,4 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add public/github-data.json
-          git diff --cached --quiet || (git commit -m "chore: update github-data.json [skip ci]" && git push)
+          git diff --cached --quiet || (git commit -m "chore: update github-data.json [skip ci]" && git push origin main)

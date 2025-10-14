@@ -13,12 +13,12 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  output: 'export',  // Add this for static export
-  basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',  // Uses your actual repo name
+  output: 'export',  // Static export for GitHub Pages
   images: {
-    unoptimized: true,
+    unoptimized: true,  // Required for static export
   },
-  trailingSlash: true,  // Add this for GitHub Pages compatibility
+  trailingSlash: true,  // Required for GitHub Pages compatibility
+  assetPrefix: './',  // Fix asset loading issues
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
