@@ -82,6 +82,21 @@
   ],
   "otherRepos": [
     {
+      "id": "R_kgDOQBbcGQ",
+      "name": "SaaSquatch-Intelligence-Hub",
+      "description": "AI-powered lead scoring & prioritization tool for SaaSquatch Leads. Analyzes leads across 5 dimensions, automatically tiers A/B/C/D, and provides actionable buying signals. Built with React + Tailwind CSS.",
+      "url": "https://github.com/HmbleCreator/SaaSquatch-Intelligence-Hub",
+      "homepageUrl": "https://saa-squatch-intelligence-hub.vercel.app",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "CSS",
+        "TypeScript",
+        "JavaScript",
+        "HTML"
+      ]
+    },
+    {
       "id": "R_kgDOOFhSig",
       "name": "hmblecreator.github.io",
       "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
@@ -96,17 +111,17 @@
       ]
     },
     {
-      "id": "R_kgDOQBbcGQ",
-      "name": "SaaSquatch-Intelligence-Hub",
-      "description": "AI-powered lead scoring & prioritization tool for SaaSquatch Leads. Analyzes leads across 5 dimensions, automatically tiers A/B/C/D, and provides actionable buying signals. Built with React + Tailwind CSS.",
-      "url": "https://github.com/HmbleCreator/SaaSquatch-Intelligence-Hub",
-      "homepageUrl": "https://saa-squatch-intelligence-hub.vercel.app",
+      "id": "R_kgDOP8RFUA",
+      "name": "framer-magic-hero-24",
+      "description": null,
+      "url": "https://github.com/HmbleCreator/framer-magic-hero-24",
+      "homepageUrl": null,
       "isFork": false,
       "isPrivate": false,
       "languages": [
-        "CSS",
-        "TypeScript",
         "JavaScript",
+        "TypeScript",
+        "CSS",
         "HTML"
       ]
     },
@@ -376,22 +391,6 @@
         ]
       },
       "count": 8
-    },
-    {
-      "repo": {
-        "id": "R_kgDOP4hDEw",
-        "nameWithOwner": "manishtarjan2/framer-magic-hero-24",
-        "description": null,
-        "url": "https://github.com/manishtarjan2/framer-magic-hero-24",
-        "isPrivate": false,
-        "languages": [
-          "TypeScript",
-          "JavaScript",
-          "HTML",
-          "CSS"
-        ]
-      },
-      "count": 3
     },
     {
       "repo": {
