@@ -503,37 +503,6 @@
         ]
       },
       "count": 1
-    },
-    {
-      "repo": {
-        "id": "MDEwOlJlcG9zaXRvcnkxNjI2OTA4ODc=",
-        "nameWithOwner": "strawberry-graphql/strawberry",
-        "description": "A GraphQL library for Python that leverages type annotations 🍓",
-        "url": "https://github.com/strawberry-graphql/strawberry",
-        "isPrivate": false,
-        "languages": [
-          "Python",
-          "HTML",
-          "Dockerfile",
-          "Shell",
-          "TypeScript"
-        ]
-      },
-      "count": 1
-    },
-    {
-      "repo": {
-        "id": "MDEwOlJlcG9zaXRvcnk0MDA0MTc3OTY=",
-        "nameWithOwner": "CycloneDX/cyclonedx-python-lib",
-        "description": "Python implementation of OWASP CycloneDX",
-        "url": "https://github.com/CycloneDX/cyclonedx-python-lib",
-        "isPrivate": false,
-        "languages": [
-          "Python",
-          "Shell"
-        ]
-      },
-      "count": 1
     }
   ]
 }
