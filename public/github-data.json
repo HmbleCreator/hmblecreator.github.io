@@ -82,20 +82,6 @@
   ],
   "otherRepos": [
     {
-      "id": "R_kgDOOFhSig",
-      "name": "hmblecreator.github.io",
-      "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
-      "url": "https://github.com/HmbleCreator/hmblecreator.github.io",
-      "homepageUrl": "https://hmblecreator.github.io/",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "CSS",
-        "TypeScript",
-        "JavaScript"
-      ]
-    },
-    {
       "id": "R_kgDOQHQVUQ",
       "name": "vastu-ai-architect",
       "description": null,
@@ -109,6 +95,33 @@
         "CSS",
         "TypeScript",
         "Python"
+      ]
+    },
+    {
+      "id": "R_kgDOPTehew",
+      "name": "scoreFi-2.0",
+      "description": null,
+      "url": "https://github.com/HmbleCreator/scoreFi-2.0",
+      "homepageUrl": null,
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Jupyter Notebook",
+        "Python"
+      ]
+    },
+    {
+      "id": "R_kgDOOFhSig",
+      "name": "hmblecreator.github.io",
+      "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
+      "url": "https://github.com/HmbleCreator/hmblecreator.github.io",
+      "homepageUrl": "https://hmblecreator.github.io/",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "CSS",
+        "TypeScript",
+        "JavaScript"
       ]
     },
     {
@@ -153,19 +166,6 @@
         "CSS",
         "TypeScript",
         "JavaScript"
-      ]
-    },
-    {
-      "id": "R_kgDOPTehew",
-      "name": "scoreFi-2.0",
-      "description": null,
-      "url": "https://github.com/HmbleCreator/scoreFi-2.0",
-      "homepageUrl": null,
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Jupyter Notebook",
-        "Python"
       ]
     },
     {
