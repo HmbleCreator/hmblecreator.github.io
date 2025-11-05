@@ -82,6 +82,20 @@
   ],
   "otherRepos": [
     {
+      "id": "R_kgDOOFhSig",
+      "name": "hmblecreator.github.io",
+      "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
+      "url": "https://github.com/HmbleCreator/hmblecreator.github.io",
+      "homepageUrl": "https://hmblecreator.github.io/",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "CSS",
+        "TypeScript",
+        "JavaScript"
+      ]
+    },
+    {
       "id": "R_kgDOQHQVUQ",
       "name": "vastu-ai-architect",
       "description": null,
@@ -95,20 +109,6 @@
         "CSS",
         "TypeScript",
         "Python"
-      ]
-    },
-    {
-      "id": "R_kgDOOFhSig",
-      "name": "hmblecreator.github.io",
-      "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
-      "url": "https://github.com/HmbleCreator/hmblecreator.github.io",
-      "homepageUrl": "https://hmblecreator.github.io/",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "CSS",
-        "TypeScript",
-        "JavaScript"
       ]
     },
     {
@@ -410,6 +410,22 @@
     },
     {
       "repo": {
+        "id": "R_kgDONykBzQ",
+        "nameWithOwner": "Goldziher/kreuzberg",
+        "description": "Document intelligence framework for Python - Extract text, metadata, and structured data   from PDFs, images, Office documents, and more. Built on Pandoc, PDFium, and Tesseract.",
+        "url": "https://github.com/Goldziher/kreuzberg",
+        "isPrivate": false,
+        "languages": [
+          "Python",
+          "HTML",
+          "Dockerfile",
+          "TeX"
+        ]
+      },
+      "count": 3
+    },
+    {
+      "repo": {
         "id": "R_kgDON6dgsw",
         "nameWithOwner": "HumbleCreators/DevFlow-Reflector",
         "description": "DevFlow Reflector is a developer productivity tool that visualizes your Git history and lets you track your coding journey through integrated journaling. It transforms raw commit logs into dynamic analytics and insights—helping you understand your work patterns and improve your workflow. Designed as a minimal MVP with future plans for Extensions.",
@@ -424,22 +440,6 @@
         ]
       },
       "count": 3
-    },
-    {
-      "repo": {
-        "id": "R_kgDONykBzQ",
-        "nameWithOwner": "Goldziher/kreuzberg",
-        "description": "Document intelligence framework for Python - Extract text, metadata, and structured data   from PDFs, images, Office documents, and more. Built on Pandoc, PDFium, and Tesseract.",
-        "url": "https://github.com/Goldziher/kreuzberg",
-        "isPrivate": false,
-        "languages": [
-          "Python",
-          "HTML",
-          "Dockerfile",
-          "TeX"
-        ]
-      },
-      "count": 2
     },
     {
       "repo": {
