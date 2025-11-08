@@ -418,8 +418,9 @@
         "languages": [
           "Python",
           "HTML",
-          "Dockerfile",
-          "TeX"
+          "TeX",
+          "Rust",
+          "TypeScript"
         ]
       },
       "count": 3
