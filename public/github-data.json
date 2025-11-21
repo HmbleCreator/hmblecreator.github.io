@@ -412,7 +412,7 @@
       "repo": {
         "id": "R_kgDONykBzQ",
         "nameWithOwner": "Goldziher/kreuzberg",
-        "description": "Document intelligence framework for Python - Extract text, metadata, and structured data   from PDFs, images, Office documents, and more. Built on Pandoc, PDFium, and Tesseract.",
+        "description": "A polyglot document intelligence framework with a Rust core. Extract text, metadata, and structured information from PDFs, Office documents, images, and 50+ formats. Available for Rust, Python, Ruby, Go, and TypeScript/Node.js—or use via CLI, REST API, or MCP server.",
         "url": "https://github.com/Goldziher/kreuzberg",
         "isPrivate": false,
         "languages": [
