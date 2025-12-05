@@ -439,9 +439,9 @@
     {
       "repo": {
         "id": "R_kgDONykBzQ",
-        "nameWithOwner": "Goldziher/kreuzberg",
+        "nameWithOwner": "kreuzberg-dev/kreuzberg",
         "description": "A polyglot document intelligence framework with a Rust core. Extract text, metadata, and structured information from PDFs, Office documents, images, and 50+ formats. Available for Rust, Python, Ruby, Go, and TypeScript/Node.js—or use via CLI, REST API, or MCP server.",
-        "url": "https://github.com/Goldziher/kreuzberg",
+        "url": "https://github.com/kreuzberg-dev/kreuzberg",
         "isPrivate": false,
         "languages": [
           "Python",
