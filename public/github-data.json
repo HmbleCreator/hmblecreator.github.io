@@ -30,18 +30,6 @@
       ]
     },
     {
-      "id": "R_kgDOOkVhrQ",
-      "name": "MathematicalUniverseExplorer",
-      "description": "Visualize 3D mathematical functions with an interactive Tkinter GUI. Powered by Matplotlib and NumPy for real-time surface rendering and custom expressions. An extended version of Desmos",
-      "url": "https://github.com/HmbleCreator/MathematicalUniverseExplorer",
-      "homepageUrl": "",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Python"
-      ]
-    },
-    {
       "id": "R_kgDOOZZqFw",
       "name": "Cosmic-Observer",
       "description": "Interactive Flask app for exploring space weather, aurora visibility, and exoplanets using real-time data from NASA and NOAA. Built with Plotly, Pandas, and Geopy.",
@@ -78,6 +66,18 @@
       "languages": [
         "Jupyter Notebook"
       ]
+    },
+    {
+      "id": "R_kgDOQaUqcQ",
+      "name": "BrainTumorClassificationModelComparison",
+      "description": "This Repo Compares Performance of three different Convolutional Neural Network (CNN) models trained for brain tumor classification into four categories: glioma, meningioma, notumor, and pituitary.",
+      "url": "https://github.com/HmbleCreator/BrainTumorClassificationModelComparison",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Jupyter Notebook"
+      ]
     }
   ],
   "otherRepos": [
@@ -109,18 +109,6 @@
         "Batchfile",
         "Python",
         "Roff"
-      ]
-    },
-    {
-      "id": "R_kgDOQaUqcQ",
-      "name": "BrainTumorClassificationModelComparison",
-      "description": "This Repo Compares Performance of three different Convolutional Neural Network (CNN) models trained for brain tumor classification into four categories: glioma, meningioma, notumor, and pituitary.",
-      "url": "https://github.com/HmbleCreator/BrainTumorClassificationModelComparison",
-      "homepageUrl": "",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Jupyter Notebook"
       ]
     },
     {
@@ -194,6 +182,18 @@
         "CSS",
         "TypeScript",
         "JavaScript"
+      ]
+    },
+    {
+      "id": "R_kgDOOkVhrQ",
+      "name": "MathematicalUniverseExplorer",
+      "description": "Visualize 3D mathematical functions with an interactive Tkinter GUI. Powered by Matplotlib and NumPy for real-time surface rendering and custom expressions. An extended version of Desmos",
+      "url": "https://github.com/HmbleCreator/MathematicalUniverseExplorer",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python"
       ]
     },
     {
