@@ -1,6 +1,22 @@
 {
   "pinnedRepos": [
     {
+      "id": "R_kgDOQutdag",
+      "name": "Vastu-Netra-AI",
+      "description": "An Intelligent Vastu Aware Framework to help LLM's Design better and Vastu Compliant Floor plans and Home Plans.",
+      "url": "https://github.com/HmbleCreator/Vastu-Netra-AI",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python",
+        "Batchfile",
+        "Shell",
+        "JavaScript",
+        "HTML"
+      ]
+    },
+    {
       "id": "R_kgDOPIQong",
       "name": "OmniDoc-AI",
       "description": "AI-powered assistant for summarizing, querying, and challenge me mode, research and legal documents using multi-provider LLMs and hybrid retrieval.",
@@ -43,31 +59,6 @@
       ]
     },
     {
-      "id": "R_kgDOMbUQGg",
-      "name": "Open-Source-Licence-Wizard",
-      "description": "A Streamlit app that helps you choose the best open-source license for your project based on your preferences. Provides recommendations with key features.",
-      "url": "https://github.com/HmbleCreator/Open-Source-Licence-Wizard",
-      "homepageUrl": "https://hmblecreator-open-source-licence-wizard-main-dxfybc.streamlit.app/",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Python",
-        "CSS"
-      ]
-    },
-    {
-      "id": "R_kgDOPPChmg",
-      "name": "scoreFi",
-      "description": "Machine learning pipeline to score DeFi wallets (0–1000) based on Aave V2 interactions. Includes feature engineering, Sybil detection, and behavioral analysis to support trust-driven lending and wallet segmentation.",
-      "url": "https://github.com/HmbleCreator/scoreFi",
-      "homepageUrl": null,
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Jupyter Notebook"
-      ]
-    },
-    {
       "id": "R_kgDOQaUqcQ",
       "name": "BrainTumorClassificationModelComparison",
       "description": "This Repo Compares Performance of three different Convolutional Neural Network (CNN) models trained for brain tumor classification into four categories: glioma, meningioma, notumor, and pituitary.",
@@ -78,24 +69,31 @@
       "languages": [
         "Jupyter Notebook"
       ]
+    },
+    {
+      "id": "R_kgDOPTehew",
+      "name": "scoreFi-2.0",
+      "description": " a risk scoring system for DeFi wallets interacting with the Compound V2 and V3 protocols. It is an extension of my existing Risk Scoring system: ScoreFi. The current system analyzes live on-chain transaction patterns, behavioral indicators, and risk management practices to assign risk scores between 0-1000, where higher scores indicate higher risk",
+      "url": "https://github.com/HmbleCreator/scoreFi-2.0",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Jupyter Notebook",
+        "Python"
+      ]
     }
   ],
   "otherRepos": [
     {
-      "id": "R_kgDOQutdag",
-      "name": "Vastu-Netra-AI",
-      "description": null,
-      "url": "https://github.com/HmbleCreator/Vastu-Netra-AI",
-      "homepageUrl": null,
+      "id": "R_kgDOLFHKHA",
+      "name": "HmbleCreator",
+      "description": "GitHub profile Config files.",
+      "url": "https://github.com/HmbleCreator/HmbleCreator",
+      "homepageUrl": "https://github.com/HmbleCreator",
       "isFork": false,
       "isPrivate": false,
-      "languages": [
-        "Python",
-        "Batchfile",
-        "Shell",
-        "JavaScript",
-        "HTML"
-      ]
+      "languages": []
     },
     {
       "id": "R_kgDOOFhSig",
@@ -139,19 +137,6 @@
         "Batchfile",
         "Python",
         "Roff"
-      ]
-    },
-    {
-      "id": "R_kgDOPTehew",
-      "name": "scoreFi-2.0",
-      "description": null,
-      "url": "https://github.com/HmbleCreator/scoreFi-2.0",
-      "homepageUrl": null,
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Jupyter Notebook",
-        "Python"
       ]
     },
     {
@@ -364,14 +349,16 @@
       ]
     },
     {
-      "id": "R_kgDOLFHKHA",
-      "name": "HmbleCreator",
-      "description": "GitHub profile Config files.",
-      "url": "https://github.com/HmbleCreator/HmbleCreator",
-      "homepageUrl": "https://github.com/HmbleCreator",
+      "id": "R_kgDOPPChmg",
+      "name": "scoreFi",
+      "description": "Machine learning pipeline to score DeFi wallets (0–1000) based on Aave V2 interactions. Includes feature engineering, Sybil detection, and behavioral analysis to support trust-driven lending and wallet segmentation.",
+      "url": "https://github.com/HmbleCreator/scoreFi",
+      "homepageUrl": null,
       "isFork": false,
       "isPrivate": false,
-      "languages": []
+      "languages": [
+        "Jupyter Notebook"
+      ]
     },
     {
       "id": "R_kgDONvA2zw",
@@ -399,6 +386,19 @@
       "isPrivate": false,
       "languages": [
         "Jupyter Notebook"
+      ]
+    },
+    {
+      "id": "R_kgDOMbUQGg",
+      "name": "Open-Source-Licence-Wizard",
+      "description": "A Streamlit app that helps you choose the best open-source license for your project based on your preferences. Provides recommendations with key features.",
+      "url": "https://github.com/HmbleCreator/Open-Source-Licence-Wizard",
+      "homepageUrl": "https://hmblecreator-open-source-licence-wizard-main-dxfybc.streamlit.app/",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python",
+        "CSS"
       ]
     },
     {
