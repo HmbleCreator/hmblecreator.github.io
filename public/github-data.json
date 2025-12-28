@@ -86,16 +86,6 @@
   ],
   "otherRepos": [
     {
-      "id": "R_kgDOLFHKHA",
-      "name": "HmbleCreator",
-      "description": "GitHub profile Config files.",
-      "url": "https://github.com/HmbleCreator/HmbleCreator",
-      "homepageUrl": "https://github.com/HmbleCreator",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": []
-    },
-    {
       "id": "R_kgDOOFhSig",
       "name": "hmblecreator.github.io",
       "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
@@ -108,6 +98,16 @@
         "TypeScript",
         "JavaScript"
       ]
+    },
+    {
+      "id": "R_kgDOLFHKHA",
+      "name": "HmbleCreator",
+      "description": "GitHub profile Config files.",
+      "url": "https://github.com/HmbleCreator/HmbleCreator",
+      "homepageUrl": "https://github.com/HmbleCreator",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": []
     },
     {
       "id": "R_kgDONkmzrg",
