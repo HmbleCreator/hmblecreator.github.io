@@ -1,6 +1,22 @@
 {
   "pinnedRepos": [
     {
+      "id": "R_kgDOQutdag",
+      "name": "Vastu-Netra-AI",
+      "description": "An Intelligent Vastu Aware Framework to help LLM's Design better and Vastu Compliant Floor plans and Home Plans.",
+      "url": "https://github.com/HmbleCreator/Vastu-Netra-AI",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python",
+        "Batchfile",
+        "Shell",
+        "JavaScript",
+        "HTML"
+      ]
+    },
+    {
       "id": "R_kgDOPIQong",
       "name": "OmniDoc-AI",
       "description": "AI-powered assistant for summarizing, querying, and challenge me mode, research and legal documents using multi-provider LLMs and hybrid retrieval.",
