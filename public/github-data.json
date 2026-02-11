@@ -86,6 +86,22 @@
   ],
   "otherRepos": [
     {
+      "id": "R_kgDORM0NzQ",
+      "name": "TaarYa",
+      "description": "An Intelligent RAG-Driven Architecture for Astronomical Star Catalogs, bridging natural language and the cosmos.",
+      "url": "https://github.com/HmbleCreator/TaarYa",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Shell",
+        "Python",
+        "Batchfile",
+        "JavaScript",
+        "HTML"
+      ]
+    },
+    {
       "id": "R_kgDOOFhSig",
       "name": "hmblecreator.github.io",
       "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
