@@ -452,25 +452,9 @@
   "contributions": [
     {
       "repo": {
-        "id": "R_kgDON83WoQ",
-        "nameWithOwner": "HumbleCreators/AI-Ethics-Auditor",
-        "description": "A FOSS toolkit to detect, explain, and mitigate bias in AI/ML models and datasets. Built for developers and researchers committed to ethical AI practices.",
-        "url": "https://github.com/HumbleCreators/AI-Ethics-Auditor",
-        "isPrivate": false,
-        "languages": [
-          "Python",
-          "CSS",
-          "JavaScript",
-          "HTML"
-        ]
-      },
-      "count": 8
-    },
-    {
-      "repo": {
         "id": "R_kgDONykBzQ",
         "nameWithOwner": "kreuzberg-dev/kreuzberg",
-        "description": "A polyglot document intelligence framework with a Rust core. Extract text, metadata, and structured information from PDFs, Office documents, images, and 75+ formats. Available for Rust, Python, Ruby, Java, Go, PHP, Elixir, C#, TypeScript (Node/Bun/Wasm/Deno)- or use via CLI, REST API, or MCP server.",
+        "description": "A polyglot document intelligence framework with a Rust core. Extract text, metadata, and structured information from PDFs, Office documents, images, and 76+ formats. Available for Rust, Python, Ruby, Java, Go, PHP, Elixir, C#, TypeScript (Node/Bun/Wasm/Deno)- or use via CLI, REST API, or MCP server.",
         "url": "https://github.com/kreuzberg-dev/kreuzberg",
         "isPrivate": false,
         "languages": [
@@ -485,20 +469,19 @@
     },
     {
       "repo": {
-        "id": "R_kgDON6dgsw",
-        "nameWithOwner": "HumbleCreators/DevFlow-Reflector",
-        "description": "DevFlow Reflector is a developer productivity tool that visualizes your Git history and lets you track your coding journey through integrated journaling. It transforms raw commit logs into dynamic analytics and insights—helping you understand your work patterns and improve your workflow. Designed as a minimal MVP with future plans for Extensions.",
-        "url": "https://github.com/HumbleCreators/DevFlow-Reflector",
+        "id": "R_kgDON83WoQ",
+        "nameWithOwner": "HumbleCreators/AI-Ethics-Auditor",
+        "description": "A FOSS toolkit to detect, explain, and mitigate bias in AI/ML models and datasets. Built for developers and researchers committed to ethical AI practices.",
+        "url": "https://github.com/HumbleCreators/AI-Ethics-Auditor",
         "isPrivate": false,
         "languages": [
           "Python",
-          "JavaScript",
           "CSS",
-          "HTML",
-          "Shell"
+          "JavaScript",
+          "HTML"
         ]
       },
-      "count": 3
+      "count": 2
     },
     {
       "repo": {
