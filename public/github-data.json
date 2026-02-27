@@ -86,6 +86,16 @@
   ],
   "otherRepos": [
     {
+      "id": "R_kgDORZNM8w",
+      "name": "New-MCP",
+      "description": null,
+      "url": "https://github.com/HmbleCreator/New-MCP",
+      "homepageUrl": null,
+      "isFork": false,
+      "isPrivate": false,
+      "languages": []
+    },
+    {
       "id": "R_kgDOOFhSig",
       "name": "hmblecreator.github.io",
       "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
