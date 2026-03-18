@@ -86,6 +86,20 @@
   ],
   "otherRepos": [
     {
+      "id": "R_kgDORpQriQ",
+      "name": "multi-context-rag-chatbot",
+      "description": null,
+      "url": "https://github.com/HmbleCreator/multi-context-rag-chatbot",
+      "homepageUrl": "https://multi-context-rag-chatbot.vercel.app",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "TypeScript",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
       "id": "R_kgDOOFhSig",
       "name": "hmblecreator.github.io",
       "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
