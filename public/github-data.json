@@ -17,6 +17,36 @@
       ]
     },
     {
+      "id": "R_kgDORM0NzQ",
+      "name": "TaarYa",
+      "description": "An Intelligent RAG-Driven Architecture for Astronomical Star Catalogs, bridging natural language and the cosmos.",
+      "url": "https://github.com/HmbleCreator/TaarYa",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Shell",
+        "Python",
+        "Batchfile",
+        "JavaScript",
+        "HTML"
+      ]
+    },
+    {
+      "id": "R_kgDORpQriQ",
+      "name": "multi-context-rag-chatbot",
+      "description": "The Multi‑Context RAG Chatbot is a retrieval‑augmented generation system designed to handle diverse knowledge sources and deliver context‑aware responses. It integrates multiple document stores and embeddings into a unified pipeline, enabling the chatbot to dynamically retrieve relevant information across domains before generating answers.",
+      "url": "https://github.com/HmbleCreator/multi-context-rag-chatbot",
+      "homepageUrl": "https://multi-context-rag-chatbot.vercel.app",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "TypeScript",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
       "id": "R_kgDOPIQong",
       "name": "OmniDoc-AI",
       "description": "AI-powered assistant for summarizing, querying, and challenge me mode, research and legal documents using multi-provider LLMs and hybrid retrieval.",
@@ -30,32 +60,6 @@
         "HTML",
         "TypeScript",
         "CSS"
-      ]
-    },
-    {
-      "id": "R_kgDON524RQ",
-      "name": "rag-chatbot",
-      "description": "Flask chatbot for querying uploaded PDFs via retrieval-augmented generation. Runs any GGUF model locally with llama.cpp—no external tools like Ollama or LM Studio required. Supports multi-model responses and session history.",
-      "url": "https://github.com/HmbleCreator/rag-chatbot",
-      "homepageUrl": "",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Python",
-        "HTML"
-      ]
-    },
-    {
-      "id": "R_kgDOOZZqFw",
-      "name": "Cosmic-Observer",
-      "description": "Interactive Flask app for exploring space weather, aurora visibility, and exoplanets using real-time data from NASA and NOAA. Built with Plotly, Pandas, and Geopy.",
-      "url": "https://github.com/HmbleCreator/Cosmic-Observer",
-      "homepageUrl": "https://cosmic-observer.vercel.app",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Python",
-        "HTML"
       ]
     },
     {
@@ -86,20 +90,6 @@
   ],
   "otherRepos": [
     {
-      "id": "R_kgDORpQriQ",
-      "name": "multi-context-rag-chatbot",
-      "description": null,
-      "url": "https://github.com/HmbleCreator/multi-context-rag-chatbot",
-      "homepageUrl": "https://multi-context-rag-chatbot.vercel.app",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "TypeScript",
-        "CSS",
-        "JavaScript"
-      ]
-    },
-    {
       "id": "R_kgDOOFhSig",
       "name": "hmblecreator.github.io",
       "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
@@ -111,22 +101,6 @@
         "CSS",
         "TypeScript",
         "JavaScript"
-      ]
-    },
-    {
-      "id": "R_kgDORM0NzQ",
-      "name": "TaarYa",
-      "description": "An Intelligent RAG-Driven Architecture for Astronomical Star Catalogs, bridging natural language and the cosmos.",
-      "url": "https://github.com/HmbleCreator/TaarYa",
-      "homepageUrl": "",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Shell",
-        "Python",
-        "Batchfile",
-        "JavaScript",
-        "HTML"
       ]
     },
     {
@@ -398,6 +372,32 @@
       "isPrivate": false,
       "languages": [
         "Jupyter Notebook"
+      ]
+    },
+    {
+      "id": "R_kgDON524RQ",
+      "name": "rag-chatbot",
+      "description": "Flask chatbot for querying uploaded PDFs via retrieval-augmented generation. Runs any GGUF model locally with llama.cpp—no external tools like Ollama or LM Studio required. Supports multi-model responses and session history.",
+      "url": "https://github.com/HmbleCreator/rag-chatbot",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python",
+        "HTML"
+      ]
+    },
+    {
+      "id": "R_kgDOOZZqFw",
+      "name": "Cosmic-Observer",
+      "description": "Interactive Flask app for exploring space weather, aurora visibility, and exoplanets using real-time data from NASA and NOAA. Built with Plotly, Pandas, and Geopy.",
+      "url": "https://github.com/HmbleCreator/Cosmic-Observer",
+      "homepageUrl": "https://cosmic-observer.vercel.app",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python",
+        "HTML"
       ]
     },
     {
