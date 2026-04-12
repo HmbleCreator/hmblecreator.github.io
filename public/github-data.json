@@ -90,6 +90,18 @@
   ],
   "otherRepos": [
     {
+      "id": "R_kgDOR_snLw",
+      "name": "PhonoSemantics",
+      "description": "A phonosemantic grounding framework that uses Sanskrit articulatory phonology to create physically grounded AI embeddings. Includes clustering experiments on 150 Sanskrit verbal roots and a 10-dimensional coordinate system derived from speech production anatomy.",
+      "url": "https://github.com/HmbleCreator/PhonoSemantics",
+      "homepageUrl": "https://hmblecreator.github.io/PhonoSemantics/",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
       "id": "R_kgDOROzXzg",
       "name": "Prometheus",
       "description": "A meta-research orchestration system that assembles world-class AI scientist teams on-demand to solve any given problem, from fundamental physics to advanced engineering challenges—compressing centuries of research into feasible timeframes.",
