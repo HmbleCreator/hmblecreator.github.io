@@ -3,7 +3,7 @@
     {
       "id": "R_kgDOQutdag",
       "name": "Vastu-Netra-AI",
-      "description": "An Intelligent Vastu Aware Framework to help LLM's Design better and Vastu Compliant Floor plans and Home Plans.",
+      "description": "An Intelligent Vastu Aware Framework to help LLM's Design better and Vastu Compliant Floor plans and Home Plans. Runs Locally on your system.",
       "url": "https://github.com/HmbleCreator/Vastu-Netra-AI",
       "homepageUrl": "",
       "isFork": false,
@@ -19,7 +19,7 @@
     {
       "id": "R_kgDORM0NzQ",
       "name": "TaarYa",
-      "description": "An Intelligent RAG-Driven Architecture for Astronomical Star Catalogs, bridging natural language and the cosmos.",
+      "description": "An Intelligent RAG-Driven Architecture for Astronomical Star Catalogs, bridging natural language and the cosmos.(Local 1st)",
       "url": "https://github.com/HmbleCreator/TaarYa",
       "homepageUrl": "",
       "isFork": false,
@@ -104,16 +104,57 @@
       ]
     },
     {
-      "id": "R_kgDOR_snLw",
-      "name": "PhonoSemantics",
-      "description": "A phonosemantic grounding framework that uses Sanskrit articulatory phonology to create physically grounded AI embeddings. Includes clustering experiments on 150 Sanskrit verbal roots and a 10-dimensional coordinate system derived from speech production anatomy.",
-      "url": "https://github.com/HmbleCreator/PhonoSemantics",
-      "homepageUrl": "https://hmblecreator.github.io/PhonoSemantics/",
+      "id": "R_kgDOPbYWMw",
+      "name": "NiftyBot",
+      "description": "NiftyBot is a sophisticated algorithmic trading system designed for the Indian stock market, specifically targeting NIFTY 50 stocks. ",
+      "url": "https://github.com/HmbleCreator/NiftyBot",
+      "homepageUrl": "",
       "isFork": false,
       "isPrivate": false,
       "languages": [
         "Python",
         "Jupyter Notebook"
+      ]
+    },
+    {
+      "id": "R_kgDOPds5CA",
+      "name": "solar-fault-detection-simulator",
+      "description": "A physics-informed Neural Network for solar panel fault detection system that blends traditional PV physics with neural network-inspired logic to monitor and diagnose solar panel health in real-time.",
+      "url": "https://github.com/HmbleCreator/solar-fault-detection-simulator",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "id": "R_kgDOP4T7Ng",
+      "name": "SMART_TASK_MANAGER",
+      "description": "interactive task management application with progress tracking, analytics, and smart features—built during the Edunet internship to demonstrate full-stack proficiency and deployment strategy.",
+      "url": "https://github.com/HmbleCreator/SMART_TASK_MANAGER",
+      "homepageUrl": "https://smart-task-manager-iota.vercel.app",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "CSS",
+        "TypeScript",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": "R_kgDOP8RFUA",
+      "name": "framer-magic-hero-24",
+      "description": "Landing page for Orbitlabs version1.0",
+      "url": "https://github.com/HmbleCreator/framer-magic-hero-24",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "JavaScript",
+        "TypeScript",
+        "CSS",
+        "HTML"
       ]
     },
     {
@@ -133,14 +174,17 @@
       ]
     },
     {
-      "id": "R_kgDORZNM8w",
-      "name": "New-MCP",
-      "description": null,
-      "url": "https://github.com/HmbleCreator/New-MCP",
-      "homepageUrl": null,
+      "id": "R_kgDOR_snLw",
+      "name": "PhonoSemantics",
+      "description": "A phonosemantic grounding framework that uses Sanskrit articulatory phonology to create physically grounded AI embeddings. Includes clustering experiments on 150 Sanskrit verbal roots and a 10-dimensional coordinate system derived from speech production anatomy.",
+      "url": "https://github.com/HmbleCreator/PhonoSemantics",
+      "homepageUrl": "https://hmblecreator.github.io/PhonoSemantics/",
       "isFork": false,
       "isPrivate": false,
-      "languages": []
+      "languages": [
+        "Python",
+        "Jupyter Notebook"
+      ]
     },
     {
       "id": "R_kgDOLFHKHA",
@@ -198,102 +242,10 @@
       ]
     },
     {
-      "id": "R_kgDOP8RFUA",
-      "name": "framer-magic-hero-24",
-      "description": null,
-      "url": "https://github.com/HmbleCreator/framer-magic-hero-24",
-      "homepageUrl": null,
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "JavaScript",
-        "TypeScript",
-        "CSS",
-        "HTML"
-      ]
-    },
-    {
-      "id": "R_kgDOP4T7Ng",
-      "name": "SMART_TASK_MANAGER",
-      "description": null,
-      "url": "https://github.com/HmbleCreator/SMART_TASK_MANAGER",
-      "homepageUrl": "https://smart-task-manager-iota.vercel.app",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "CSS",
-        "TypeScript",
-        "JavaScript"
-      ]
-    },
-    {
       "id": "R_kgDOOkVhrQ",
       "name": "MathematicalUniverseExplorer",
       "description": "Visualize 3D mathematical functions with an interactive Tkinter GUI. Powered by Matplotlib and NumPy for real-time surface rendering and custom expressions. An extended version of Desmos",
       "url": "https://github.com/HmbleCreator/MathematicalUniverseExplorer",
-      "homepageUrl": "",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Python"
-      ]
-    },
-    {
-      "id": "R_kgDOPds5CA",
-      "name": "solar-fault-detection-simulator",
-      "description": null,
-      "url": "https://github.com/HmbleCreator/solar-fault-detection-simulator",
-      "homepageUrl": null,
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Python"
-      ]
-    },
-    {
-      "id": "R_kgDOPbYWMw",
-      "name": "NiftyBot",
-      "description": null,
-      "url": "https://github.com/HmbleCreator/NiftyBot",
-      "homepageUrl": null,
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Python",
-        "Jupyter Notebook"
-      ]
-    },
-    {
-      "id": "R_kgDOPYe2wA",
-      "name": "Sample",
-      "description": null,
-      "url": "https://github.com/HmbleCreator/Sample",
-      "homepageUrl": "https://chatgpt-clone-production-e685.up.railway.app/",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "JavaScript",
-        "TypeScript",
-        "CSS",
-        "Batchfile",
-        "Dockerfile"
-      ]
-    },
-    {
-      "id": "R_kgDOPR10Tg",
-      "name": "Shreem",
-      "description": null,
-      "url": "https://github.com/HmbleCreator/Shreem",
-      "homepageUrl": null,
-      "isFork": false,
-      "isPrivate": false,
-      "languages": []
-    },
-    {
-      "id": "R_kgDOLnfuRQ",
-      "name": "Game",
-      "description": "Fruit Frenzy was my first fun project—a quirky Tkinter-based guessing game where players chase points by randomly drawing fruits or veggies. It includes score tracking, turn-based logic, and a personalized greeting system. A lighthearted way to explore GUIs, randomness, and interactive design in Python.",
-      "url": "https://github.com/HmbleCreator/Game",
       "homepageUrl": "",
       "isFork": false,
       "isPrivate": false,
@@ -505,6 +457,22 @@
   "contributions": [
     {
       "repo": {
+        "id": "R_kgDON83WoQ",
+        "nameWithOwner": "HumbleCreators/AI-Ethics-Auditor",
+        "description": "A FOSS toolkit to detect, explain, and mitigate bias in AI/ML models and datasets. Built for developers and researchers committed to ethical AI practices.",
+        "url": "https://github.com/HumbleCreators/AI-Ethics-Auditor",
+        "isPrivate": false,
+        "languages": [
+          "Python",
+          "CSS",
+          "JavaScript",
+          "HTML"
+        ]
+      },
+      "count": 8
+    },
+    {
+      "repo": {
         "id": "R_kgDONykBzQ",
         "nameWithOwner": "kreuzberg-dev/kreuzberg",
         "description": "A polyglot document intelligence framework with a Rust core. Extract text, metadata, images, and structured information from PDFs, Office documents, images, and 91+ formats. Available for Rust, Python, Ruby, Java, Go, PHP, Elixir, C#, R, C, TypeScript (Node/Bun/Wasm/Deno)- or use via CLI, REST API, or MCP server.",
@@ -516,6 +484,23 @@
           "TeX",
           "Rust",
           "TypeScript"
+        ]
+      },
+      "count": 3
+    },
+    {
+      "repo": {
+        "id": "R_kgDON6dgsw",
+        "nameWithOwner": "HumbleCreators/DevFlow-Reflector",
+        "description": "DevFlow Reflector is a developer productivity tool that visualizes your Git history and lets you track your coding journey through integrated journaling. It transforms raw commit logs into dynamic analytics and insights—helping you understand your work patterns and improve your workflow. Designed as a minimal MVP with future plans for Extensions.",
+        "url": "https://github.com/HumbleCreators/DevFlow-Reflector",
+        "isPrivate": false,
+        "languages": [
+          "Python",
+          "JavaScript",
+          "CSS",
+          "HTML",
+          "Shell"
         ]
       },
       "count": 3
@@ -595,6 +580,50 @@
           "NSIS",
           "SCSS",
           "EJS"
+        ]
+      },
+      "count": 1
+    },
+    {
+      "repo": {
+        "id": "MDEwOlJlcG9zaXRvcnkxNjI2OTA4ODc=",
+        "nameWithOwner": "strawberry-graphql/strawberry",
+        "description": "A GraphQL library for Python that leverages type annotations 🍓",
+        "url": "https://github.com/strawberry-graphql/strawberry",
+        "isPrivate": false,
+        "languages": [
+          "Python",
+          "HTML",
+          "Dockerfile",
+          "Shell",
+          "TypeScript"
+        ]
+      },
+      "count": 1
+    },
+    {
+      "repo": {
+        "id": "MDEwOlJlcG9zaXRvcnk0MDA0MTc3OTY=",
+        "nameWithOwner": "CycloneDX/cyclonedx-python-lib",
+        "description": "Functionality and DataModels of OWASP CycloneDX for Python",
+        "url": "https://github.com/CycloneDX/cyclonedx-python-lib",
+        "isPrivate": false,
+        "languages": [
+          "Python",
+          "Shell"
+        ]
+      },
+      "count": 1
+    },
+    {
+      "repo": {
+        "id": "MDEwOlJlcG9zaXRvcnkzMjMwNDg3MDI=",
+        "nameWithOwner": "OpenBB-finance/OpenBB",
+        "description": "Financial data platform for analysts, quants and AI agents.",
+        "url": "https://github.com/OpenBB-finance/OpenBB",
+        "isPrivate": false,
+        "languages": [
+          "Python"
         ]
       },
       "count": 1
