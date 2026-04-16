@@ -90,19 +90,6 @@
   ],
   "otherRepos": [
     {
-      "id": "R_kgDOR_snLw",
-      "name": "PhonoSemantics",
-      "description": "A phonosemantic grounding framework that uses Sanskrit articulatory phonology to create physically grounded AI embeddings. Includes clustering experiments on 150 Sanskrit verbal roots and a 10-dimensional coordinate system derived from speech production anatomy.",
-      "url": "https://github.com/HmbleCreator/PhonoSemantics",
-      "homepageUrl": "https://hmblecreator.github.io/PhonoSemantics/",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Python",
-        "Jupyter Notebook"
-      ]
-    },
-    {
       "id": "R_kgDOOFhSig",
       "name": "hmblecreator.github.io",
       "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
@@ -114,6 +101,19 @@
         "CSS",
         "TypeScript",
         "JavaScript"
+      ]
+    },
+    {
+      "id": "R_kgDOR_snLw",
+      "name": "PhonoSemantics",
+      "description": "A phonosemantic grounding framework that uses Sanskrit articulatory phonology to create physically grounded AI embeddings. Includes clustering experiments on 150 Sanskrit verbal roots and a 10-dimensional coordinate system derived from speech production anatomy.",
+      "url": "https://github.com/HmbleCreator/PhonoSemantics",
+      "homepageUrl": "https://hmblecreator.github.io/PhonoSemantics/",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python",
+        "Jupyter Notebook"
       ]
     },
     {
