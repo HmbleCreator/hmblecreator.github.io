@@ -8,7 +8,23 @@ const GITHUB_USERNAME = 'HmbleCreator';
 const GITHUB_TOKEN = process.env.MY_GH_PAT || process.env.GITHUB_TOKEN;
 const GITHUB_API_URL = 'https://api.github.com/graphql';
 
+const yearsToFetch = [2026, 2025, 2024, 2023, 2022, 2021, 2020];
+
 const query = `
+  fragment ContributionFragment on ContributionsCollection {
+    pullRequestContributionsByRepository(maxRepositories: 30) {
+      repository {
+        id
+        nameWithOwner
+        description
+        url
+        isPrivate
+        languages(first: 5) { nodes { name } }
+      }
+      contributions { totalCount }
+    }
+  }
+
   query {
     user(login: "${GITHUB_USERNAME}") {
       pinnedItems(first: 6, types: REPOSITORY) {
@@ -37,19 +53,7 @@ const query = `
           languages(first: 5) { nodes { name } }
         }
       }
-      contributionsCollection {
-        pullRequestContributionsByRepository(maxRepositories: 30) {
-          repository {
-            id
-            nameWithOwner
-            description
-            url
-            isPrivate
-            languages(first: 5) { nodes { name } }
-          }
-          contributions { totalCount }
-        }
-      }
+      ${yearsToFetch.map(y => `contributions_${y}: contributionsCollection(from: "${y}-01-01T00:00:00Z", to: "${y}-12-31T23:59:59Z") { ...ContributionFragment }`).join('\n      ')}
     }
   }
 `;
@@ -99,21 +103,34 @@ async function fetchGitHubData() {
   const pinnedIds = new Set(pinnedRepos.map((r: any) => r.id));
   const otherRepos = allRepos.filter((r: any) => !pinnedIds.has(r.id));
 
-  // Contributions to other public repos
-  const contributions = data.user.contributionsCollection.pullRequestContributionsByRepository
-    .filter((c: any) =>
-      c.repository &&
-      !c.repository.isPrivate &&
-      c.repository.nameWithOwner.split("/")[0] !== GITHUB_USERNAME &&
-      c.contributions.totalCount > 0
-    )
-    .map((c: any) => ({
-      repo: {
-        ...c.repository,
-        languages: c.repository.languages.nodes.map((l: any) => l.name),
-      },
-      count: c.contributions.totalCount,
-    }));
+  // Aggregate contributions from all fetched years
+  const repoContributionsMap = new Map();
+
+  yearsToFetch.forEach(year => {
+    const coll = data.user[`contributions_${year}`];
+    if (coll && coll.pullRequestContributionsByRepository) {
+      coll.pullRequestContributionsByRepository.forEach((c: any) => {
+        if (!c.repository || c.repository.isPrivate) return;
+        if (c.repository.nameWithOwner.split("/")[0] === GITHUB_USERNAME) return;
+        if (c.contributions.totalCount === 0) return;
+
+        const repoId = c.repository.id;
+        if (repoContributionsMap.has(repoId)) {
+          repoContributionsMap.get(repoId).count += c.contributions.totalCount;
+        } else {
+          repoContributionsMap.set(repoId, {
+            repo: {
+              ...c.repository,
+              languages: c.repository.languages.nodes.map((l: any) => l.name)
+            },
+            count: c.contributions.totalCount
+          });
+        }
+      });
+    }
+  });
+
+  const contributions = Array.from(repoContributionsMap.values()).sort((a: any, b: any) => b.count - a.count);
 
   return { pinnedRepos, otherRepos, contributions };
 }
