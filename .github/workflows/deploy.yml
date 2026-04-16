@@ -4,7 +4,6 @@ on:
   push:
     branches: [ main ]
     paths-ignore:
-      - 'public/github-data.json'
       - 'README.md'
   workflow_dispatch:
 

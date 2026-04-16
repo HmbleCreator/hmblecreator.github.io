@@ -20,6 +20,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.MY_GH_PAT }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -39,4 +40,4 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add public/github-data.json
-          git diff --cached --quiet || (git commit -m "chore: update github-data.json [skip ci]" && git push origin main)
+          git diff --cached --quiet || (git commit -m "chore: update github-data.json" && git push origin main)
