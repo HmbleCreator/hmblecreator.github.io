@@ -1,22 +1,26 @@
 import "@/styles/globals.css"
-import { Space_Mono, Inter } from 'next/font/google'
+import { Archivo_Black, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import { cn } from "@/lib/utils"
 
-const spaceMono = Space_Mono({ 
-  weight: ['400', '700'],
+const mono = JetBrains_Mono({ 
   subsets: ['latin'],
-  variable: '--font-space-mono'
+  variable: '--font-mono'
 })
 
-const inter = Inter({ 
+const sans = Space_Grotesk({ 
   subsets: ["latin"],
-  variable: '--font-inter'
+  variable: '--font-sans'
+})
+
+const display = Archivo_Black({
+  subsets: ["latin"],
+  variable: '--font-display',
+  weight: ['400']
 })
 
 export const metadata = {
-  title: "Amit's Portfolio",
+  title: "Amit | Cosmic Brutalism",
   description: "Exploring the Universe Through Physics, Mathematics & Programming",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -25,18 +29,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark scroll-smooth">
       <body className={cn(
-        inter.variable,
-        spaceMono.variable,
-        "min-h-screen bg-black antialiased overflow-x-hidden font-sans"
+        sans.variable,
+        mono.variable,
+        display.variable,
+        "min-h-screen bg-[#0a0a0a] text-[#ffffff] antialiased overflow-x-hidden font-sans"
       )}>
         {children}
       </body>
     </html>
   )
 }
-
-
-
-import './globals.css'

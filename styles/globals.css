@@ -4,78 +4,60 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --mint-green: 152 95% 58%;
-    --mint-green-foreground: 152 95% 10%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 152 95% 58%;
-    --radius: 0.5rem;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
+    --accent: 20 100% 60%; /* Neon Orange */
+    --secondary: 142 100% 70%; /* Neon Green */
   }
 
-  .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-    --card: 0 0% 3%;
-    --card-foreground: 0 0% 100%;
-    --popover: 0 0% 3%;
-    --popover-foreground: 0 0% 100%;
-    --mint-green: 152 95% 58%;
-    --mint-green-foreground: 152 95% 10%;
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 152 95% 5%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 152 95% 58%;
+  body {
+    @apply bg-[#0a0a0a] text-white antialiased;
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+@layer utilities {
+  .brutal-card {
+    @apply bg-black border-[3px] border-white transition-all;
+    box-shadow: 10px 10px 0px 0px white;
+  }
+
+  .brutal-card:hover {
+    @apply -translate-x-1 -translate-y-1;
+    box-shadow: 15px 15px 0px 0px var(--accent);
+    border-color: var(--accent);
+  }
+
+  .neon-text {
+    @apply font-display uppercase italic;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    transition: all 0.3s;
+  }
+
+  .neon-text:hover {
+    color: white;
+    -webkit-text-stroke: 1px var(--accent);
+    text-shadow: 0 0 20px var(--accent);
+  }
+
+  .raw-label {
+    @apply bg-white text-black px-2 py-1 font-mono text-[10px] font-bold uppercase;
   }
 }
 
 .font-mono {
-  font-family: var(--font-space-mono), monospace;
+  font-family: var(--font-mono), monospace;
 }
 
 .font-sans {
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-sans), sans-serif;
 }
 
-@layer utilities {
-  .text-mint {
-    color: hsl(var(--mint-green));
-  }
-  
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.font-display {
+  font-family: var(--font-display), sans-serif;
 }
 

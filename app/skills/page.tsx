@@ -1,73 +1,61 @@
 "use client";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 
 const skillGroups = [
   {
-    title: "Languages & Frameworks",
-    skills: [
-      "Python", "JavaScript", "TypeScript", "React", "Next.js", "FastAPI", "LangChain", "HTML", "CSS", "CustomTkinter"
-    ]
+    title: "Scientific Stack",
+    skills: ["Python", "PyTorch", "NumPy", "SciPy", "Matplotlib", "Jupyter", "FastAPI"]
   },
   {
-    title: "Tools & Platforms",
-    skills: [
-      "Docker", "Kubernetes", "Git", "GitHub", "Linux", "VS Code", "Jupyter", "Zindi", "Kaggle", "Vercel", "Hugging Face"
-    ]
+    title: "Neuromorphic & AI",
+    skills: ["SNNs", "Reservoir Computing", "BCM Homeostasis", "LLMOps", "Semantic Search", "RAG"]
   },
   {
-    title: "Expertise",
-    skills: [
-      "MLOps & LLMOps", "RAG Systems", "Semantic Search", "Prompt Engineering", "Sybil Detection", "Credit Scoring Models",
-      "Feature Engineering", "Frontend Development", "Quantum Simulations", "Open Source Strategy",
-      "Mathematics", "Physics", "Philosophical Reasoning"
-    ]
+    title: "Frontend Engineering",
+    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "D3.js"]
   },
   {
-    title: "Soft Skills",
-    skills: [
-      "Problem Solving", "Resilience", "Iterative Debugging", "Collaboration", "Strategic Thinking", "Technical Writing", "Mentoring"
-    ]
+    title: "Mathematical Foundations",
+    skills: ["Topological Analysis", "Information Theory", "Classical Mechanics", "Quantum Logic"]
   }
 ];
 
 export default function SkillsPage() {
   return (
-    <div className="min-h-screen bg-black text-white py-20 px-4 flex items-center justify-center relative">
+    <div className="relative min-h-screen p-8 md:p-24 selection:bg-accent selection:text-black">
       {/* Navigation */}
-      <nav className="fixed top-0 right-0 z-50 p-8">
-        <ul className="flex space-x-8 font-mono text-lg">
-          <li><Link href="/" className="text-white hover:text-mint-green transition-colors">Home</Link></li>
-          <li><Link href="/skills" className="text-white hover:text-mint-green transition-colors">Skills</Link></li>
-          <li><Link href="/projects" className="text-white hover:text-mint-green transition-colors">Projects</Link></li>
+      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center p-8 mix-blend-difference">
+        <div className="text-4xl font-display tracking-tighter">AMIT</div>
+        <ul className="flex space-x-8 font-mono text-[10px] uppercase font-black">
+          <li><Link href="/" className="border border-white px-2 hover:bg-white hover:text-black transition-all">01.RESEARCH</Link></li>
+          <li><Link href="/skills" className="bg-white text-black px-2 hover:bg-accent transition-colors">02.DOMAINS</Link></li>
+          <li><Link href="/projects" className="border border-white px-2 hover:bg-white hover:text-black transition-all">03.WORK</Link></li>
         </ul>
       </nav>
-      <div className="container mx-auto max-w-3xl pt-24">
-        <h1 className="text-4xl md:text-5xl font-mono font-bold mb-12 text-center">
-          <span className="text-mint-green">Skills</span> & Expertise
-        </h1>
-        <Card className="p-8 bg-black/40 backdrop-blur-lg border-mint-green/20 shadow-lg">
-          <div className="space-y-8">
-            {skillGroups.map((group) => (
-              <div key={group.title}>
-                <h2 className="text-2xl font-mono font-bold mb-4 text-mint-green">{group.title}</h2>
-                <div className="flex flex-wrap gap-3">
-                  {group.skills.map((skill) => (
-                    <Badge
-                      key={skill}
-                      variant="outline"
-                      className="py-2 px-4 text-sm border-mint-green/20 hover:border-mint-green/40 transition-colors bg-black/60 text-mint-green font-mono"
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
+
+      <main className="max-w-7xl mx-auto pt-32">
+        <div className="raw-label mb-8 inline-block">Competency Matrix: Loaded</div>
+        <h1 className="text-[12vw] font-display italic mb-24 tracking-tighter leading-none">DOMAINS.</h1>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-[3px] border-white divide-y md:divide-y-0 md:divide-x-[3px] divide-white">
+          {skillGroups.map((group) => (
+            <div key={group.title} className="p-12 hover:bg-white hover:text-black transition-colors group">
+              <h2 className="font-mono text-xs font-black uppercase tracking-[0.3em] text-accent mb-12 group-hover:text-black">{group.title}</h2>
+              <div className="flex flex-wrap gap-4">
+                {group.skills.map((skill) => (
+                  <span key={skill} className="px-4 py-2 border-[2px] border-white font-mono text-sm font-bold group-hover:border-black">
+                    {skill}
+                  </span>
+                ))}
               </div>
-            ))}
-          </div>
-        </Card>
-      </div>
+            </div>
+          ))}
+        </div>
+      </main>
+
+      <footer className="mt-32 border-t-[3px] border-white pt-12 pb-24">
+        <div className="font-display text-4xl italic">AMIT © 2024</div>
+      </footer>
     </div>
   );
 }

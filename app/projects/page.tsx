@@ -1,10 +1,9 @@
 "use client";
 
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Github, ExternalLink } from 'lucide-react'
-import { useEffect, useState, useRef } from "react";
+import { Github, ArrowUpRight, BookOpen, GitBranch } from 'lucide-react'
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils"
 
 interface Repo {
   id: string;
@@ -32,118 +31,211 @@ interface GitHubData {
   contributions: Contribution[];
 }
 
+const researchPapers = [
+  {
+    title: "Semantic Pressure and Zero-Shot Generalization: Scaling the DDIN Receiver Model to a 2000-Root Linguistic Manifold",
+    category: "Paper 4",
+    desc: "Demonstrating 11x amplification of phonosemantic signal in zero-weight AdEx reservoirs. Achieved ARI=0.9555 at language scale (N=2000).",
+    metric: "ARI 0.9993 (Best)",
+    link: "https://doi.org/10.5281/zenodo.SINGULARITY"
+  },
+  {
+    title: "Phonosemantic Grounding: Sanskrit as a Formalized Case of Motivated Sign Structure for Interpretable AI",
+    category: "Paper 1",
+    desc: "Empirical validation of Pāṇinian articulatory loci as the basis for semantic vector space grounding across Sanskrit corpora.",
+    metric: "Locus-ARI 0.086",
+    link: "https://doi.org/10.5281/zenodo.19564026"
+  },
+  {
+    title: "Sequential Phonosemantic Encoding in ODE Reservoirs: Breaking Static Baselines and Measuring Capacity Ceilings",
+    category: "Paper 2",
+    desc: "Identifying the causal link between reservoir criticality (r=-0.53) and the emergence of stable semantic attractor basins.",
+    metric: "r = -0.53",
+    link: "https://doi.org/10.5281/zenodo.19570075"
+  },
+  {
+    title: "The Epileptiform Synchrony Limit: E/I Equilibrium as a Physical Prerequisite for Intelligence in Spiking Neural Networks",
+    category: "Paper 3",
+    desc: "Defining the E/I equilibrium as a physical prerequisite for scaling contextual memory and avoiding network collapse.",
+    metric: "ESL Theory",
+    link: "https://doi.org/10.5281/zenodo.19602055"
+  }
+];
+
 export default function ProjectsPage() {
   const [data, setData] = useState<GitHubData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<Error | null>(null);
-  const projectsRef = useRef<HTMLDivElement>(null);
-  const contributionsRef = useRef<HTMLDivElement>(null);
-
-  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const [mainTab, setMainTab] = useState<'papers' | 'opensource'>('papers');
+  const [activeTab, setActiveTab] = useState<'repos' | 'contributions'>('repos');
 
   useEffect(() => {
     fetch("/github-data.json")
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch GitHub data");
-        return res.json();
-      })
+      .then((res) => res.ok ? res.json() : null)
       .then(setData)
-      .catch((err) => setError(err))
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <div className="text-center py-20">Loading...</div>;
-  if (error) return <div className="text-center py-20 text-red-500">Error: {error.message}</div>;
-  if (!data) return null;
-
-  const { pinnedRepos, otherRepos, contributions } = data;
-
   return (
-    <div className="min-h-screen bg-black text-white py-20 px-4">
-      {/* Transparent Header */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md border-b border-mint-green/20 flex items-center justify-between px-8 py-4 transition-all">
-        <div className="font-mono text-lg font-bold tracking-widest text-mint-green">Projects</div>
-        <nav className="flex gap-6">
-          <button
-            className="text-white hover:text-mint-green transition-colors font-mono text-base"
-            onClick={() => scrollToSection(projectsRef)}
-          >
-            Featured Projects
-          </button>
-          <button
-            className="text-white hover:text-mint-green transition-colors font-mono text-base"
-            onClick={() => scrollToSection(contributionsRef)}
-          >
-            My Contributions
-          </button>
-        </nav>
-      </header>
-      {/* Spacer for header */}
-      <div className="h-20" />
-      <div className="container mx-auto max-w-6xl">
-        <h1 ref={projectsRef} className="text-4xl md:text-5xl font-mono font-bold mb-16 text-center">
-          Featured <span className="text-mint-green">Projects</span>
-        </h1>
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {[...pinnedRepos, ...otherRepos].map((project: Repo) => (
-            <Card
-              key={project.id}
-              className="p-6 bg-black/40 backdrop-blur-lg border-mint-green/20 hover:border-mint-green/40 transition-all duration-300"
+    <div className="relative min-h-screen p-8 md:p-12 selection:bg-accent selection:text-black">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center p-8 mix-blend-difference">
+        <div className="text-4xl font-display tracking-tighter text-white">AMIT</div>
+        <ul className="flex space-x-8 font-mono text-[10px] uppercase font-black">
+          <li><Link href="/" className="border border-white px-2 text-white hover:bg-white hover:text-black transition-all">01.RESEARCH</Link></li>
+          <li><Link href="/skills" className="border border-white px-2 text-white hover:bg-white hover:text-black transition-all">02.DOMAINS</Link></li>
+          <li><Link href="/projects" className="bg-white text-black px-2 hover:bg-accent transition-colors">03.WORK</Link></li>
+        </ul>
+      </nav>
+
+      <main className="max-w-7xl mx-auto pt-16">
+        <div className="raw-label mb-6 inline-block">Archive Status: Online</div>
+        
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8">
+          <h1 className="text-[8vw] md:text-[6vw] font-display italic tracking-tighter leading-none text-white">WORK.</h1>
+          
+          <div className="flex space-x-4 mb-2">
+            <button 
+              onClick={() => setMainTab('papers')}
+              className={cn(
+                "font-mono text-xs font-black px-6 py-3 border-[3px] transition-all shadow-[4px_4px_0px_0px_white]",
+                mainTab === 'papers' ? "bg-white text-black border-white" : "text-white border-white hover:bg-white/10"
+              )}
             >
-              <h3 className="text-xl font-mono font-bold mb-4">{project.name}</h3>
-              <p className="text-gray-400 mb-6">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.languages.map((lang: string) => (
-                  <span key={lang} className="px-3 py-1 rounded-full text-xs bg-mint-green/10 text-mint-green">{lang}</span>
-                ))}
-              </div>
-              <div className="flex gap-4">
-                <Button variant="outline" size="sm" className="gap-2" asChild>
-                  <Link href={project.url}>
-                    <Github className="h-4 w-4" />
-                    Code
-                  </Link>
-                </Button>
-                {project.homepageUrl && (
-                  <Button variant="outline" size="sm" className="gap-2" asChild>
-                    <Link href={project.homepageUrl}>
-                      <ExternalLink className="h-4 w-4" />
-                      Demo
+              RESEARCH_PAPERS
+            </button>
+            <button 
+              onClick={() => setMainTab('opensource')}
+              className={cn(
+                "font-mono text-xs font-black px-6 py-3 border-[3px] transition-all shadow-[4px_4px_0px_0px_white]",
+                mainTab === 'opensource' ? "bg-white text-black border-white" : "text-white border-white hover:bg-white/10"
+              )}
+            >
+              OPEN_SOURCE
+            </button>
+          </div>
+        </div>
+
+        {mainTab === 'papers' ? (
+          /* Research Section */
+          <section className="space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="flex items-center space-x-4">
+              <BookOpen className="w-5 h-5 text-accent" />
+              <div className="font-mono text-xs font-black uppercase tracking-[0.3em] text-accent">PRIMARY_RESEARCH_PAPERS</div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-[3px] border-white divide-y md:divide-y-0 md:divide-x-[3px] divide-white">
+              {researchPapers.map((paper) => (
+                <div key={paper.title} className="p-8 hover:bg-white hover:text-black transition-colors group flex flex-col justify-between">
+                  <div className="space-y-4">
+                    <div className="font-mono text-[10px] text-accent group-hover:text-black">{paper.category}</div>
+                    <h3 className="text-2xl font-display leading-tight line-clamp-2 h-14">{paper.title}</h3>
+                    <p className="font-mono text-[10px] leading-tight opacity-60 group-hover:opacity-100 line-clamp-2 h-8">{paper.desc}</p>
+                  </div>
+                  <div className="flex justify-between items-center pt-6 mt-6 border-t border-white/20 group-hover:border-black/20">
+                    <span className="font-mono text-[9px] font-black opacity-40">{paper.metric}</span>
+                    <Link href={paper.link} target="_blank" className="p-2 border-[2px] border-white group-hover:border-black transition-colors">
+                      <ArrowUpRight className="w-3 h-3" />
                     </Link>
-                  </Button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        ) : (
+          /* Open Source Section */
+          <section className="space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b-[3px] border-white pb-8 gap-8">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-4">
+                  <GitBranch className="w-5 h-5 text-secondary" />
+                  <div className="font-mono text-xs font-black uppercase tracking-[0.3em] text-secondary">OPEN_SOURCE_ECOSYSTEM</div>
+                </div>
+                <div className="flex space-x-4">
+                  <button 
+                    onClick={() => setActiveTab('repos')}
+                    className={cn(
+                      "font-mono text-[10px] font-black px-4 py-2 border-[2px] transition-all",
+                      activeTab === 'repos' ? "bg-white text-black border-white" : "text-white border-white/20 hover:border-white"
+                    )}
+                  >
+                    01. REPOSITORIES
+                  </button>
+                  <button 
+                    onClick={() => setActiveTab('contributions')}
+                    className={cn(
+                      "font-mono text-[10px] font-black px-4 py-2 border-[2px] transition-all",
+                      activeTab === 'contributions' ? "bg-white text-black border-white" : "text-white border-white/20 hover:border-white"
+                    )}
+                  >
+                    02. CONTRIBUTIONS
+                  </button>
+                </div>
+              </div>
+              <div className="font-mono text-[10px] opacity-20 uppercase tracking-[0.5em]">Updated via GitHub Actions</div>
+            </div>
+
+            {loading ? (
+              <div className="font-mono text-xs opacity-20">ACCESSING_GITHUB_API...</div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
+                {activeTab === 'repos' ? (
+                  data?.pinnedRepos.concat(data.otherRepos).map((repo) => (
+                    <div key={repo.id} className="brutal-card p-10 group flex flex-col justify-between min-h-[350px]">
+                      <div className="space-y-6">
+                        <div className="flex justify-between items-start">
+                          <h4 className="text-2xl md:text-3xl font-display italic leading-none break-all pr-8">{repo.name}</h4>
+                          <Link href={repo.url} target="_blank">
+                            <Github className="w-6 h-6 opacity-40 hover:opacity-100 transition-opacity" />
+                          </Link>
+                        </div>
+                        <p className="font-mono text-xs opacity-60 leading-relaxed overflow-hidden line-clamp-4">
+                          {repo.description || "No description provided."}
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap gap-2 mt-8">
+                        {repo.languages.map(lang => (
+                          <span key={lang} className="raw-label text-[8px]">{lang}</span>
+                        ))}
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  data?.contributions.map((contrib) => (
+                    <div key={contrib.repo.id} className="brutal-card p-10 group flex flex-col justify-between min-h-[350px]">
+                      <div className="space-y-6">
+                        <div className="flex justify-between items-start">
+                          <h4 className="text-2xl md:text-3xl font-display italic leading-none break-all pr-8">
+                            {contrib.repo.nameWithOwner}
+                          </h4>
+                          <Link href={contrib.repo.url} target="_blank">
+                            <Github className="w-6 h-6 opacity-40 hover:opacity-100 transition-opacity" />
+                          </Link>
+                        </div>
+                        <p className="font-mono text-xs opacity-60 leading-relaxed overflow-hidden line-clamp-4">
+                          {contrib.repo.description || "No description provided."}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-between mt-8">
+                        <div className="flex flex-wrap gap-2">
+                          {contrib.repo.languages.slice(0, 3).map(lang => (
+                            <span key={lang} className="raw-label text-[8px]">{lang}</span>
+                          ))}
+                        </div>
+                        <div className="font-mono text-[10px] font-black text-secondary">
+                          {contrib.count} COMMITS
+                        </div>
+                      </div>
+                    </div>
+                  ))
                 )}
               </div>
-            </Card>
-          ))}
-        </div>
-        <h2 ref={contributionsRef} className="text-3xl font-mono font-bold mb-8 text-center">My Contributions</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {contributions.map((contrib: Contribution) => (
-            <Card key={contrib.repo.id} className="p-6 bg-black/40 backdrop-blur-lg border-mint-green/20">
-              <h3 className="text-xl font-mono font-bold mb-2">{contrib.repo.nameWithOwner}</h3>
-              <p className="text-gray-400 mb-4">{contrib.repo.description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {contrib.repo.languages.map((lang: string) => (
-                  <span key={lang} className="px-3 py-1 rounded-full text-xs bg-mint-green/10 text-mint-green">{lang}</span>
-                ))}
-              </div>
-              <div className="flex gap-4">
-                <Button variant="outline" size="sm" className="gap-2" asChild>
-                  <Link href={contrib.repo.url}>
-                    <Github className="h-4 w-4" />
-                    Repo
-                  </Link>
-                </Button>
-              </div>
-              <div className="mt-4 text-xs text-gray-500">Contributions: {contrib.count}</div>
-            </Card>
-          ))}
-        </div>
-      </div>
+            )}
+          </section>
+        )}
+      </main>
+
+      <footer className="mt-48 border-t-[3px] border-white pt-12 pb-24">
+        <div className="font-display text-4xl italic text-white">AMIT © 2024</div>
+      </footer>
     </div>
   );
 }
