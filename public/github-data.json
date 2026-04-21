@@ -90,6 +90,20 @@
   ],
   "otherRepos": [
     {
+      "id": "R_kgDOOFhSig",
+      "name": "hmblecreator.github.io",
+      "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
+      "url": "https://github.com/HmbleCreator/hmblecreator.github.io",
+      "homepageUrl": "https://hmblecreator.github.io/",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "CSS",
+        "TypeScript",
+        "JavaScript"
+      ]
+    },
+    {
       "id": "R_kgDOSG5cxQ",
       "name": "ddin-reservoir",
       "description": "Exploring Beyond Neural Networks and Transformers",
@@ -114,20 +128,6 @@
       "languages": [
         "Python",
         "Jupyter Notebook"
-      ]
-    },
-    {
-      "id": "R_kgDOOFhSig",
-      "name": "hmblecreator.github.io",
-      "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
-      "url": "https://github.com/HmbleCreator/hmblecreator.github.io",
-      "homepageUrl": "https://hmblecreator.github.io/",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "CSS",
-        "TypeScript",
-        "JavaScript"
       ]
     },
     {
