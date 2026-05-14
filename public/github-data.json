@@ -467,10 +467,10 @@
         "isPrivate": false,
         "languages": [
           "Python",
-          "HTML",
           "TeX",
           "Rust",
-          "TypeScript"
+          "TypeScript",
+          "Ruby"
         ]
       },
       "count": 3
