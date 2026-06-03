@@ -90,6 +90,18 @@
   ],
   "otherRepos": [
     {
+      "id": "R_kgDOSvFISw",
+      "name": "Anviksha",
+      "description": null,
+      "url": "https://github.com/HmbleCreator/Anviksha",
+      "homepageUrl": null,
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
       "id": "R_kgDOSmLtEg",
       "name": "Mathematically-Correct-Way-to-DSA",
       "description": "The most rigorous, mathematical way to learn Data Structures and Algorithms is to strip away the \"code\" and view every problem as a formal mathematical system. Instead of asking \"What data structure do I use?\", you ask, \"What are the mathematical properties of this data, and what transformations preserve those properties?\"",
