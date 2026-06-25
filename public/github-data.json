@@ -116,16 +116,6 @@
       ]
     },
     {
-      "id": "R_kgDOSmLtEg",
-      "name": "Mathematically-Correct-Way-to-DSA",
-      "description": "The most rigorous, mathematical way to learn Data Structures and Algorithms is to strip away the \"code\" and view every problem as a formal mathematical system. Instead of asking \"What data structure do I use?\", you ask, \"What are the mathematical properties of this data, and what transformations preserve those properties?\"",
-      "url": "https://github.com/HmbleCreator/Mathematically-Correct-Way-to-DSA",
-      "homepageUrl": null,
-      "isFork": false,
-      "isPrivate": false,
-      "languages": []
-    },
-    {
       "id": "R_kgDOSfKX3g",
       "name": "EtharaAI",
       "description": "Team Task management for project teams. create projects, manage project teams, assign tasks, update status, and track dashboard progress with Admin/Member role-based access.",
@@ -497,9 +487,9 @@
     {
       "repo": {
         "id": "R_kgDONykBzQ",
-        "nameWithOwner": "kreuzberg-dev/kreuzberg",
+        "nameWithOwner": "xberg-io/kreuzberg",
         "description": "A polyglot document intelligence framework with a Rust core. Extract text, metadata, images, and structured information from PDFs, Office documents, images, and 97+ formats. Available for Rust, Python, Ruby, Java, Go, PHP, Elixir, C#, R, C, TypeScript (Node/Bun/Wasm/Deno)- or use via CLI, REST API, or MCP server.",
-        "url": "https://github.com/kreuzberg-dev/kreuzberg",
+        "url": "https://github.com/xberg-io/kreuzberg",
         "isPrivate": false,
         "languages": [
           "Python",
