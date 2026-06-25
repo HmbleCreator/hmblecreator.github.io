@@ -1,5 +1,12 @@
 export const researchPapers = [
   {
+    title: 'Acoustic Formant Features Are Insufficient for Semantic Axis Recovery but Sufficient for Articulatory Locus Classification in Sanskrit Verbal Roots',
+    category: 'Paper 05',
+    desc: 'A spiking reservoir computing audit showing that acoustic formants fail to recover semantic axes but succeed in classifying articulatory loci under corrected gloss-based labels.',
+    metric: 'negative result audit',
+    link: 'https://doi.org/10.5281/zenodo.19785993',
+  },
+  {
     title: 'Semantic Pressure and Zero-Shot Generalization: Scaling the DDIN Receiver Model to a 2000-Root Linguistic Manifold',
     category: 'Paper 04',
     desc: 'A reservoir-scale experiment measuring how phonosemantic signal behaves under larger root sets and stronger semantic pressure.',
