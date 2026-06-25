@@ -19,7 +19,7 @@ const display = Archivo_Black({
 })
 
 export const metadata = {
-  title: "Amit | Research, Experiments, Work",
+  title: "Amit | Research, Papers, Projects",
   description: "A portfolio for research notes, projects, experiments, and iterative technical work.",
 }
 

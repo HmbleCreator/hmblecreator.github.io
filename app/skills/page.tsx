@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { SiteNav } from '@/components/SiteNav'
 
 const skills = [
   {
@@ -31,28 +31,7 @@ const interests = [
 export default function SkillsPage() {
   return (
     <div className="relative min-h-screen bg-[#070707] px-5 py-6 selection:bg-accent selection:text-black md:px-10 md:py-8">
-      <nav className="fixed left-0 top-0 z-50 flex w-full items-center justify-between px-5 py-5 md:px-10 md:py-8">
-        <Link href="/" className="font-display text-2xl leading-none text-white md:text-3xl">
-          AMIT
-        </Link>
-        <ul className="flex items-center gap-2 font-mono text-[10px] font-black uppercase md:gap-5">
-          <li>
-            <Link href="/" className="nav-chip">
-              Research
-            </Link>
-          </li>
-          <li>
-            <Link href="/skills" className="nav-chip bg-white text-black">
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link href="/projects" className="nav-chip">
-              Work
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <SiteNav active="skills" />
 
       <main className="mx-auto max-w-7xl pt-32">
         <div className="mb-8 flex items-center gap-3 font-mono text-[10px] uppercase text-white/50">

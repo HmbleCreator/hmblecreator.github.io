@@ -166,13 +166,13 @@ export default function ParticleBackground() {
     }
 
     const drawLight = () => {
-      const glow = ctx.createRadialGradient(pointerX, pointerY, 0, pointerX, pointerY, Math.max(width, height) * 0.42)
-      glow.addColorStop(0, 'rgba(255, 244, 214, 0.18)')
-      glow.addColorStop(0.22, 'rgba(255, 128, 74, 0.10)')
-      glow.addColorStop(0.58, 'rgba(94, 197, 255, 0.06)')
+      const radius = width < 768 ? 92 : 128
+      const glow = ctx.createRadialGradient(pointerX, pointerY, 0, pointerX, pointerY, radius)
+      glow.addColorStop(0, 'rgba(255, 238, 184, 0.22)')
+      glow.addColorStop(0.34, 'rgba(255, 184, 95, 0.12)')
       glow.addColorStop(1, 'rgba(0, 0, 0, 0)')
       ctx.fillStyle = glow
-      ctx.fillRect(0, 0, width, height)
+      ctx.fillRect(pointerX - radius, pointerY - radius, radius * 2, radius * 2)
     }
 
     const drawDust = (time: number) => {
