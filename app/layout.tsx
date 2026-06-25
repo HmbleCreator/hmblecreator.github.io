@@ -19,8 +19,8 @@ const display = Archivo_Black({
 })
 
 export const metadata = {
-  title: "Amit | Cosmic Brutalism",
-  description: "Exploring the Universe Through Physics, Mathematics & Programming",
+  title: "Amit | Research, Experiments, Work",
+  description: "A portfolio for research notes, projects, experiments, and iterative technical work.",
 }
 
 export default function RootLayout({

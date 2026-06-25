@@ -12,14 +12,19 @@
 
   body {
     @apply bg-[#0a0a0a] text-white antialiased;
-    background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 20px 20px;
+    background: #070707;
   }
 }
 
 @layer utilities {
+  .nav-chip {
+    @apply inline-flex items-center border border-white/35 px-3 py-2 text-white transition-colors hover:border-white hover:bg-white hover:text-black;
+  }
+
+  .icon-link {
+    @apply inline-flex h-10 w-10 items-center justify-center border border-white/30 text-white transition-colors hover:border-white hover:bg-white hover:text-black;
+  }
+
   .brutal-card {
     @apply bg-black border-[3px] border-white transition-all;
     box-shadow: 10px 10px 0px 0px white;

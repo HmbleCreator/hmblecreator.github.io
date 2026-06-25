@@ -1,62 +1,107 @@
-"use client";
-import Link from "next/link";
+import Link from 'next/link'
 
-const skillGroups = [
+const skills = [
   {
-    title: "Scientific Stack",
-    skills: ["Python", "PyTorch", "NumPy", "SciPy", "Matplotlib", "Jupyter", "FastAPI"]
+    title: 'Scientific programming',
+    items: ['Python', 'Jupyter', 'NumPy', 'Pandas', 'Matplotlib', 'simulation notebooks'],
   },
   {
-    title: "Neuromorphic & AI",
-    skills: ["SNNs", "Reservoir Computing", "BCM Homeostasis", "LLMOps", "Semantic Search", "RAG"]
+    title: 'AI systems',
+    items: ['RAG pipelines', 'semantic search', 'local LLM tooling', 'document intelligence', 'model evaluation'],
   },
   {
-    title: "Frontend Engineering",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "D3.js"]
+    title: 'Product engineering',
+    items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'deployment workflows'],
   },
   {
-    title: "Mathematical Foundations",
-    skills: ["Topological Analysis", "Information Theory", "Classical Mechanics", "Quantum Logic"]
-  }
-];
+    title: 'Data and automation',
+    items: ['data cleaning', 'risk scoring', 'classification', 'workflow tools', 'GitHub automation'],
+  },
+]
+
+const interests = [
+  'tools that make messy knowledge searchable',
+  'interfaces for scientific and mathematical exploration',
+  'local-first AI assistants and document systems',
+  'data products with clear feedback loops',
+  'visual experiments that turn abstract systems into something inspectable',
+  'open-source projects that are useful before they are polished',
+]
 
 export default function SkillsPage() {
   return (
-    <div className="relative min-h-screen p-8 md:p-24 selection:bg-accent selection:text-black">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center p-8 mix-blend-difference">
-        <div className="text-4xl font-display tracking-tighter">AMIT</div>
-        <ul className="flex space-x-8 font-mono text-[10px] uppercase font-black">
-          <li><Link href="/" className="border border-white px-2 hover:bg-white hover:text-black transition-all">01.RESEARCH</Link></li>
-          <li><Link href="/skills" className="bg-white text-black px-2 hover:bg-accent transition-colors">02.DOMAINS</Link></li>
-          <li><Link href="/projects" className="border border-white px-2 hover:bg-white hover:text-black transition-all">03.WORK</Link></li>
+    <div className="relative min-h-screen bg-[#070707] px-5 py-6 selection:bg-accent selection:text-black md:px-10 md:py-8">
+      <nav className="fixed left-0 top-0 z-50 flex w-full items-center justify-between px-5 py-5 md:px-10 md:py-8">
+        <Link href="/" className="font-display text-2xl leading-none text-white md:text-3xl">
+          AMIT
+        </Link>
+        <ul className="flex items-center gap-2 font-mono text-[10px] font-black uppercase md:gap-5">
+          <li>
+            <Link href="/" className="nav-chip">
+              Research
+            </Link>
+          </li>
+          <li>
+            <Link href="/skills" className="nav-chip bg-white text-black">
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link href="/projects" className="nav-chip">
+              Work
+            </Link>
+          </li>
         </ul>
       </nav>
 
-      <main className="max-w-7xl mx-auto pt-32">
-        <div className="raw-label mb-8 inline-block">Competency Matrix: Loaded</div>
-        <h1 className="text-[12vw] font-display italic mb-24 tracking-tighter leading-none">DOMAINS.</h1>
+      <main className="mx-auto max-w-7xl pt-32">
+        <div className="mb-8 flex items-center gap-3 font-mono text-[10px] uppercase text-white/50">
+          <span className="h-px w-12 bg-white/35" />
+          Working vocabulary
+        </div>
+        <h1 className="max-w-5xl font-display text-6xl leading-[0.9] text-white md:text-8xl">
+          Skills and interests.
+        </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-[3px] border-white divide-y md:divide-y-0 md:divide-x-[3px] divide-white">
-          {skillGroups.map((group) => (
-            <div key={group.title} className="p-12 hover:bg-white hover:text-black transition-colors group">
-              <h2 className="font-mono text-xs font-black uppercase tracking-[0.3em] text-accent mb-12 group-hover:text-black">{group.title}</h2>
-              <div className="flex flex-wrap gap-4">
-                {group.skills.map((skill) => (
-                  <span key={skill} className="px-4 py-2 border-[2px] border-white font-mono text-sm font-bold group-hover:border-black">
-                    {skill}
+        <section className="mt-16 border-t border-white/20">
+          {skills.map((group, index) => (
+            <div
+              key={group.title}
+              className="grid gap-5 border-b border-white/20 py-8 md:grid-cols-[0.42fr_1fr] md:items-start"
+            >
+              <div className="flex items-center gap-4">
+                <span className="font-mono text-[10px] text-white/35">{String(index + 1).padStart(2, '0')}</span>
+                <h2 className="font-display text-2xl text-white md:text-4xl">{group.title}</h2>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {group.items.map((item) => (
+                  <span
+                    key={item}
+                    className="border border-white/25 px-3 py-2 font-mono text-[11px] uppercase text-white/72 transition-colors hover:border-accent hover:text-white"
+                  >
+                    {item}
                   </span>
                 ))}
               </div>
             </div>
           ))}
-        </div>
+        </section>
+
+        <section className="grid gap-8 py-16 md:grid-cols-[0.42fr_1fr]">
+          <h2 className="font-mono text-xs font-black uppercase text-accent">Interests</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            {interests.map((interest) => (
+              <p key={interest} className="border-l border-white/25 pl-5 text-lg font-black leading-tight text-white/86 md:text-2xl">
+                {interest}
+              </p>
+            ))}
+          </div>
+        </section>
       </main>
 
-      <footer className="mt-32 border-t-[3px] border-white pt-12 pb-24">
-        <div className="font-display text-4xl italic">AMIT © 2024</div>
+      <footer className="mx-auto mt-12 max-w-7xl border-t border-white/20 py-10">
+        <div className="font-display text-3xl italic text-white">AMIT 2026</div>
       </footer>
     </div>
-  );
+  )
 }
-

@@ -1,97 +1,122 @@
-import { Github, Linkedin, Mail, ArrowUpRight, Terminal } from 'lucide-react'
-import Link from "next/link"
+import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react'
+import Link from 'next/link'
+import ParticleBackground from '@/components/ParticleBackground'
+
+const rhythms = [
+  'ask',
+  'build',
+  'break',
+  'measure',
+  'rewrite',
+  'repeat',
+]
 
 export default function Home() {
   return (
-    <div className="relative h-screen overflow-hidden p-6 md:p-12 selection:bg-accent selection:text-black">
-      {/* Navigation */}
-      <nav className="absolute top-0 left-0 w-full z-50 flex justify-between items-center p-6 md:p-12 mix-blend-difference">
-        <div className="text-3xl font-display tracking-tighter">AMIT</div>
-        <ul className="flex space-x-6 font-mono text-[9px] uppercase font-black">
-          <li><Link href="/" className="bg-white text-black px-2 hover:bg-accent transition-colors">01.RESEARCH</Link></li>
-          <li><Link href="/skills" className="border border-white px-2 hover:bg-white hover:text-black transition-all">02.DOMAINS</Link></li>
-          <li><Link href="/projects" className="border border-white px-2 hover:bg-white hover:text-black transition-all">03.WORK</Link></li>
+    <div className="relative min-h-screen overflow-hidden selection:bg-accent selection:text-black">
+      <ParticleBackground />
+
+      <nav className="fixed left-0 top-0 z-50 flex w-full items-center justify-between px-5 py-5 md:px-10 md:py-8">
+        <Link href="/" className="font-display text-2xl leading-none text-white md:text-3xl">
+          AMIT
+        </Link>
+        <ul className="flex items-center gap-2 font-mono text-[10px] font-black uppercase md:gap-5">
+          <li>
+            <Link href="/" className="nav-chip bg-white text-black">
+              Research
+            </Link>
+          </li>
+          <li>
+            <Link href="/skills" className="nav-chip">
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link href="/projects" className="nav-chip">
+              Work
+            </Link>
+          </li>
         </ul>
       </nav>
 
-      {/* Main Content */}
-      <main className="h-full flex flex-col justify-center max-w-7xl mx-auto pt-12">
-        <section className="relative space-y-12">
-          <div className="raw-label inline-block">System Status: Active</div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Side: Title and Intro */}
-            <div className="lg:col-span-7 space-y-8">
-              <h1 className="text-[9vw] md:text-[6.5vw] leading-[0.8] font-display">
-                <span className="neon-text">Exploring</span><br />
-                <span>The Universe</span>
-              </h1>
-              <p className="text-xl md:text-3xl font-sans font-black tracking-tight leading-tight max-w-xl">
-                BUILDING <span className="text-accent italic">SPiking</span> MANIFOLDS & 
-                <span className="text-secondary italic">TOPOLOGICAL</span> INTERFACES.
-              </p>
-              <div className="flex flex-wrap gap-4 pt-4">
-                <BrutalLink href="https://github.com/HmbleCreator" label="GITHUB" />
-                <BrutalLink href="https://linkedin.com/in/amit-kumar-0b9a5325a" label="LINKEDIN" />
-                <BrutalLink href="mailto:amikumar91101@gmail.com" label="CONTACT" />
-              </div>
+      <main className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-5 pb-28 pt-28 md:px-10 md:pb-24 md:pt-32">
+        <section className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+          <div className="max-w-5xl">
+            <div className="mb-8 flex items-center gap-3 font-mono text-[10px] uppercase text-white/55">
+              <span className="h-px w-12 bg-white/40" />
+              Live notebook, imperfect systems
             </div>
-            
-            {/* Right Side: Mission Card and Info */}
-            <div className="lg:col-span-5 space-y-8">
-              <div className="brutal-card p-8 space-y-6 bg-accent/10">
-                <div className="flex items-center space-x-3 border-b border-white pb-4">
-                  <Terminal className="w-5 h-5 text-accent" />
-                  <span className="font-mono text-[10px] font-bold tracking-[0.2em]">CURRENT_MISSION</span>
-                </div>
-                <div className="space-y-4">
-                  <h2 className="text-3xl font-display italic leading-none">DDIN: PHONOSEMANTIC RESERVOIR</h2>
-                  <p className="font-mono text-xs leading-relaxed text-white/70">
-                    Solving the vector grounding problem by mapping Sanskrit articulatory physics to AdEx spiking neurons.
-                  </p>
-                </div>
-                <Link href="/projects" className="block w-full text-center py-4 bg-white text-black font-mono font-black text-[10px] hover:bg-accent transition-colors">
-                  EXECUTE_VIEW_PROJECT()
-                </Link>
-              </div>
+            <h1 className="font-display text-6xl leading-[0.88] text-white md:text-8xl lg:text-9xl">
+              Research is
+              <span className="block text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.88)]">
+                iteration.
+              </span>
+            </h1>
+          </div>
 
-              <div className="grid grid-cols-1 gap-0 border-[2px] border-white divide-y-[2px] divide-white bg-black/50">
-                <BrutalInfo num="01" title="PHYSICS" desc="Dynamics & Wavefunctions." />
-                <BrutalInfo num="02" title="MATH" desc="Topology & Info Theory." />
-                <BrutalInfo num="03" title="CODE" desc="Neuromorphic SNNs." />
-              </div>
+          <div className="max-w-xl justify-self-start lg:justify-self-end">
+            <p className="text-xl font-black leading-tight text-white md:text-3xl">
+              I make tools, models, simulations, and strange little experiments. Some fail fast.
+              The useful ones get rebuilt until they explain something better.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <OutboundLink href="https://github.com/HmbleCreator" label="GitHub" icon="github" />
+              <OutboundLink href="https://linkedin.com/in/amit-kumar-0b9a5325a" label="LinkedIn" icon="linkedin" />
+              <OutboundLink href="mailto:amikumar91101@gmail.com" label="Contact" icon="mail" />
             </div>
+          </div>
+        </section>
+
+        <section className="mt-20 grid gap-8 border-y border-white/20 py-8 md:grid-cols-[0.8fr_1.2fr] md:items-center">
+          <p className="font-mono text-[11px] uppercase leading-relaxed text-white/52">
+            Current bias: local-first AI, scientific computing, visual systems, retrieval, data
+            tools, simulation, and interfaces that make uncertainty visible.
+          </p>
+          <div className="flex flex-wrap gap-x-5 gap-y-3 md:justify-end">
+            {rhythms.map((item, index) => (
+              <span
+                key={item}
+                className="font-display text-2xl uppercase text-white/85 md:text-4xl"
+                style={{ opacity: 0.95 - index * 0.08 }}
+              >
+                {item}
+              </span>
+            ))}
           </div>
         </section>
       </main>
 
-      <footer className="absolute bottom-0 left-0 w-full p-6 md:p-12 flex justify-between items-center mix-blend-difference">
-        <div className="font-display text-2xl italic">AMIT&copy;2026</div>
-        <div className="font-mono text-[8px] text-white/40 uppercase tracking-widest">
-          High-Dimensional Explorer
+      <footer className="pointer-events-none fixed bottom-0 left-0 z-20 flex w-full items-end justify-between px-5 py-5 text-white/45 md:px-10 md:py-8">
+        <div className="font-display text-xl italic md:text-2xl">AMIT 2026</div>
+        <div className="hidden font-mono text-[9px] uppercase md:block">
+          cursor distorts the fabric
         </div>
       </footer>
     </div>
   )
 }
 
-function BrutalLink({ href, label }: { href: string, label: string }) {
+function OutboundLink({
+  href,
+  label,
+  icon,
+}: {
+  href: string
+  label: string
+  icon: 'github' | 'linkedin' | 'mail'
+}) {
+  const Icon = icon === 'github' ? Github : icon === 'linkedin' ? Linkedin : Mail
+  const isMail = href.startsWith('mailto:')
+
   return (
-    <Link href={href} target="_blank" className="font-mono text-[10px] font-black px-6 py-3 border-[2px] border-white hover:bg-accent hover:text-black transition-all shadow-[4px_4px_0px_0px_white] hover:shadow-[6px_6px_0px_0px_#000]">
+    <Link
+      href={href}
+      target={isMail ? undefined : '_blank'}
+      className="group inline-flex items-center gap-2 border border-white/35 bg-black/20 px-4 py-3 font-mono text-[10px] font-black uppercase text-white backdrop-blur transition-colors hover:border-white hover:bg-white hover:text-black"
+    >
+      <Icon className="h-4 w-4" />
       {label}
+      {!isMail && <ArrowUpRight className="h-3 w-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />}
     </Link>
   )
 }
-
-function BrutalInfo({ num, title, desc }: { num: string, title: string, desc: string }) {
-  return (
-    <div className="px-6 py-4 flex items-center justify-between hover:bg-white hover:text-black transition-colors group">
-      <div className="flex items-center space-x-4">
-        <span className="font-mono text-[10px] font-black opacity-40">{num}</span>
-        <h3 className="text-xl font-display">{title}</h3>
-      </div>
-      <p className="font-mono text-[10px] opacity-60 text-right">{desc}</p>
-    </div>
-  )
-}
-
