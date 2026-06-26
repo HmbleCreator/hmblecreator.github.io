@@ -487,9 +487,9 @@
     {
       "repo": {
         "id": "R_kgDONykBzQ",
-        "nameWithOwner": "xberg-io/kreuzberg",
+        "nameWithOwner": "xberg-io/xberg",
         "description": "A polyglot document intelligence framework with a Rust core. Extract text, metadata, images, and structured information from PDFs, Office documents, images, and 97+ formats. Available for Rust, Python, Ruby, Java, Go, PHP, Elixir, C#, R, C, TypeScript (Node/Bun/Wasm/Deno)- or use via CLI, REST API, or MCP server.",
-        "url": "https://github.com/xberg-io/kreuzberg",
+        "url": "https://github.com/xberg-io/xberg",
         "isPrivate": false,
         "languages": [
           "Python",
