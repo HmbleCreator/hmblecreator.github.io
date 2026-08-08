@@ -90,19 +90,6 @@
   ],
   "otherRepos": [
     {
-      "id": "R_kgDOPbYWMw",
-      "name": "NiftyBot",
-      "description": "NiftyBot is a sophisticated algorithmic trading system designed for the Indian stock market, specifically targeting NIFTY 50 stocks. ",
-      "url": "https://github.com/HmbleCreator/NiftyBot",
-      "homepageUrl": "",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Python",
-        "Jupyter Notebook"
-      ]
-    },
-    {
       "id": "R_kgDOOFhSig",
       "name": "hmblecreator.github.io",
       "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
@@ -114,6 +101,19 @@
         "CSS",
         "TypeScript",
         "JavaScript"
+      ]
+    },
+    {
+      "id": "R_kgDOPbYWMw",
+      "name": "NiftyBot",
+      "description": "NiftyBot is a sophisticated algorithmic trading system designed for the Indian stock market, specifically targeting NIFTY 50 stocks. ",
+      "url": "https://github.com/HmbleCreator/NiftyBot",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python",
+        "Jupyter Notebook"
       ]
     },
     {
