@@ -90,6 +90,21 @@
   ],
   "otherRepos": [
     {
+      "id": "R_kgDONvA2zw",
+      "name": "space-debris-tracker",
+      "description": "Tracks orbital debris using satellite data and ML models to analyze space object motion and collision risks. Built with Python backend and interactive frontend.",
+      "url": "https://github.com/HmbleCreator/space-debris-tracker",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "Python",
+        "CSS",
+        "JavaScript",
+        "HTML"
+      ]
+    },
+    {
       "id": "R_kgDOOFhSig",
       "name": "hmblecreator.github.io",
       "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
@@ -392,22 +407,6 @@
       "languages": [
         "Python",
         "HTML"
-      ]
-    },
-    {
-      "id": "R_kgDONvA2zw",
-      "name": "space-debris-tracker",
-      "description": "Tracks orbital debris using satellite data and ML models to analyze space object motion and collision risks. Built with Python backend and interactive frontend.",
-      "url": "https://github.com/HmbleCreator/space-debris-tracker",
-      "homepageUrl": "",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Python",
-        "Cython",
-        "C",
-        "C++",
-        "Meson"
       ]
     },
     {
