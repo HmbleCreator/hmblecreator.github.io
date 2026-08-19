@@ -33,17 +33,18 @@
       ]
     },
     {
-      "id": "R_kgDORpQriQ",
-      "name": "multi-context-rag-chatbot",
-      "description": "The Multi‑Context RAG Chatbot is a retrieval‑augmented generation system designed to handle diverse knowledge sources and deliver context‑aware responses. It integrates multiple document stores and embeddings into a unified pipeline, enabling the chatbot to dynamically retrieve relevant information across domains before generating answers.",
-      "url": "https://github.com/HmbleCreator/multi-context-rag-chatbot",
-      "homepageUrl": "https://multi-context-rag-chatbot.vercel.app",
+      "id": "R_kgDONvA2zw",
+      "name": "space-debris-tracker",
+      "description": "A modular, high-fidelity astrodynamics simulation, risk mitigation, and autonomous robotics mission planning platform for space debris tracking, aerothermal demise analysis, Point Nemo targeted deorbit, and orbital Vehicle Routing Problem (VRP) fleet sizing.",
+      "url": "https://github.com/HmbleCreator/space-debris-tracker",
+      "homepageUrl": "",
       "isFork": false,
       "isPrivate": false,
       "languages": [
-        "TypeScript",
+        "Python",
         "CSS",
-        "JavaScript"
+        "JavaScript",
+        "HTML"
       ]
     },
     {
@@ -89,21 +90,6 @@
     }
   ],
   "otherRepos": [
-    {
-      "id": "R_kgDONvA2zw",
-      "name": "space-debris-tracker",
-      "description": "Tracks orbital debris using satellite data and ML models to analyze space object motion and collision risks. Built with Python backend and interactive frontend.",
-      "url": "https://github.com/HmbleCreator/space-debris-tracker",
-      "homepageUrl": "",
-      "isFork": false,
-      "isPrivate": false,
-      "languages": [
-        "Python",
-        "CSS",
-        "JavaScript",
-        "HTML"
-      ]
-    },
     {
       "id": "R_kgDOOFhSig",
       "name": "hmblecreator.github.io",
@@ -249,6 +235,20 @@
         "TypeScript",
         "CSS",
         "HTML"
+      ]
+    },
+    {
+      "id": "R_kgDORpQriQ",
+      "name": "multi-context-rag-chatbot",
+      "description": "The Multi‑Context RAG Chatbot is a retrieval‑augmented generation system designed to handle diverse knowledge sources and deliver context‑aware responses. It integrates multiple document stores and embeddings into a unified pipeline, enabling the chatbot to dynamically retrieve relevant information across domains before generating answers.",
+      "url": "https://github.com/HmbleCreator/multi-context-rag-chatbot",
+      "homepageUrl": "https://multi-context-rag-chatbot.vercel.app",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "TypeScript",
+        "CSS",
+        "JavaScript"
       ]
     },
     {
