@@ -487,7 +487,7 @@
       "repo": {
         "id": "R_kgDONykBzQ",
         "nameWithOwner": "xberg-io/xberg",
-        "description": "A polyglot document intelligence framework with a Rust core. Extract text, metadata, images, and structured data from 101 formats (115 file extensions) plus code intelligence for 371 code languages. 15 language bindings — Rust, Python, Ruby, Java, Go, PHP, Elixir, C#, TypeScript — plus CLI, REST API, and MCP server.",
+        "description": "Polyglot document intelligence with a Rust core: extract text, metadata, images, tables, and structured data from 106 formats across 140 file extensions, plus code intelligence for 371 languages. Fifteen bindings, with CLI, REST API, and MCP server.",
         "url": "https://github.com/xberg-io/xberg",
         "isPrivate": false,
         "languages": [
