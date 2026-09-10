@@ -91,6 +91,19 @@
   ],
   "otherRepos": [
     {
+      "id": "R_kgDOTGhdOQ",
+      "name": "Flood-based-Pruning-for-LLM-Efficiency",
+      "description": "Prunning the LLMs after post training for efficiency and better performance",
+      "url": "https://github.com/HmbleCreator/Flood-based-Pruning-for-LLM-Efficiency",
+      "homepageUrl": "",
+      "isFork": false,
+      "isPrivate": false,
+      "languages": [
+        "TeX",
+        "Python"
+      ]
+    },
+    {
       "id": "R_kgDOOFhSig",
       "name": "hmblecreator.github.io",
       "description": "Personal website built with Next.js and Tailwind CSS to showcase projects, thoughts, and digital experiments. A telescope into my world of computational creativity, elegant equations, and tech-driven insights.",
