@@ -643,9 +643,9 @@
     {
       "repo": {
         "id": "MDEwOlJlcG9zaXRvcnkzMjMwNDg3MDI=",
-        "nameWithOwner": "OpenBB-finance/OpenBB",
+        "nameWithOwner": "openbq-org/OpenBB",
         "description": "Open Data Platform for analysts, quants and AI agents.",
-        "url": "https://github.com/OpenBB-finance/OpenBB",
+        "url": "https://github.com/openbq-org/OpenBB",
         "isPrivate": false,
         "languages": [
           "Python"
